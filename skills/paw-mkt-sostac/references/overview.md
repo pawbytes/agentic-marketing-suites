@@ -52,7 +52,9 @@ Then tell it which brand to work on. It will:
 2. Present findings
 3. Begin the Phase 1 interview, skipping anything already confirmed by research
 4. Save each phase document after confirmation
-5. Resume from the last completed phase in future sessions
+5. **Present Review Gate after each phase** — user must approve before advancing
+6. **Run Final Plan Review Session** after all 6 phases — quality scorecard and sign-off
+7. Resume from the last completed phase in future sessions
 
 ## Brand workspace structure
 

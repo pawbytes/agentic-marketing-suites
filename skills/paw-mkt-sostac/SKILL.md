@@ -58,6 +58,7 @@ General references (auto-discovery.md, best-practices.md) are read directly — 
 | Tactics Planning | Load `./references/capability-tactics.md` |
 | Action Planning | Load `./references/capability-action.md` |
 | Control Setup | Load `./references/capability-control.md` |
+| **Final Plan Review** | Load `./references/quality-scorecard.md` |
 
 ## Supporting References
 
@@ -68,6 +69,7 @@ General references (auto-discovery.md, best-practices.md) are read directly — 
 | `./references/best-practices.md` | Benchmarks, pitfalls, and industry standards |
 | `./references/auto-discovery.md` | Browser automation commands for research |
 | `./references/shared-patterns.md` | Shared patterns across marketing skills |
+| `./references/quality-scorecard.md` | Final plan review quality criteria |
 
 ## Output Structure
 
@@ -95,6 +97,92 @@ Every phase follows this 5-step **Research-Recommend-Validate** sequence:
 3. **Present Findings** — Share analysis with 3-5 most important insights and strategic implications.
 4. **Validate & Refine** — Ask 2-4 targeted questions to fill genuine gaps. Incorporate feedback.
 5. **Save and Advance** — Write the final phase document, update README.md, move on.
+
+---
+
+## HITL Review Gates ⚠️ CRITICAL
+
+**Human-in-the-Loop checkpoints are MANDATORY.** Never auto-advance through multiple phases without user review.
+
+### Phase Completion Gate (After Each Phase)
+
+After saving a phase document, **STOP and present for review:**
+
+```
+## Phase X Complete: [Phase Name]
+
+**Saved to:** `[file path]`
+
+### Key Decisions Made
+- [Decision 1 with reasoning]
+- [Decision 2 with reasoning]
+
+### Cross-Phase Consistency Check
+✅ Aligns with: [previous phase references]
+✅ Supports: [future phase dependencies]
+
+---
+
+**Review Options:**
+1. ✅ **Approve & Continue** — Move to next phase
+2. 🔄 **Request Changes** — Tell me what to adjust
+3. 📋 **Deep Dive** — Walk through specific sections in detail
+
+**What would you like to do?**
+```
+
+**DO NOT:**
+- Auto-advance to the next phase without explicit user approval
+- Assume silence means approval
+- Skip the review gate even if the user seems passive
+
+### Final Plan Review Session (After Phase 6)
+
+After all 6 phases are complete, **run a structured review session** before considering the plan final:
+
+1. **Quality Scorecard** — Load `./references/quality-scorecard.md` and score each phase
+2. **Cross-Phase Consistency Audit** — Verify alignment across all phases
+3. **Industry Standard Checklist** — Confirm plan meets professional marketing plan standards
+4. **Present for Final Approval** — Show summary and ask for sign-off or changes
+
+```
+## 📋 SOSTAC Plan Review Session
+
+### Quality Scorecard
+| Phase | Score | Notes |
+|-------|-------|-------|
+| Situation | X/10 | [strengths/gaps] |
+| Objectives | X/10 | [strengths/gaps] |
+| Strategy | X/10 | [strengths/gaps] |
+| Tactics | X/10 | [strengths/gaps] |
+| Action | X/10 | [strengths/gaps] |
+| Control | X/10 | [strengths/gaps] |
+
+### Cross-Phase Consistency
+- ✅ Objectives address Situation gaps: [specific reference]
+- ✅ Strategy segments are reachable: [specific reference]
+- ✅ Tactics serve Strategy: [specific reference]
+- ✅ Control measures all OKRs: [specific reference]
+
+### Industry Standard Checklist
+- ✅ Evidence-based recommendations
+- ✅ Measurable objectives with targets
+- ✅ Clear targeting and positioning
+- ✅ Prioritized tactics with rationale
+- ✅ Actionable timeline with owners
+- ✅ Measurement framework defined
+
+---
+
+**This plan is ready for execution.**
+
+**What would you like to do?**
+1. ✅ **Approve Plan** — Mark as final and proceed to implementation
+2. 🔄 **Request Changes** — Tell me which phases need adjustment
+3. 📖 **Walk Through** — Detailed review of specific sections
+```
+
+---
 
 ### Resumption Logic
 
@@ -125,7 +213,8 @@ When you cannot research an answer:
 - Show complete draft before saving
 - Ask: "Anything you'd change before I save this?"
 - Only save after confirmation
-- Announce next phase with preview
+- **After saving: Present Review Gate options (see HITL Review Gates section)**
+- Announce next phase with preview — but DO NOT start until user approves
 
 ## Output Contract
 
@@ -136,5 +225,12 @@ Each phase delivers:
 - **User decisions captured**: what the user confirmed, changed, or chose
 - **Cross-phase consistency**: confirmation of alignment with prior phases
 - **Status update**: updated README.md with completion status
-- **Next phase preview**: what will be researched next
+- **Review gate presented**: user asked to Approve/Request Changes/Deep Dive
+- **Next phase preview**: what will be researched next (only after user approval)
 - **File saved to**: path where phase document was written
+
+After all 6 phases complete:
+- **Quality scorecard**: score for each phase (X/10)
+- **Cross-phase consistency audit**: alignment verification
+- **Industry standard checklist**: professional marketing plan standards
+- **Final approval requested**: user must approve before execution

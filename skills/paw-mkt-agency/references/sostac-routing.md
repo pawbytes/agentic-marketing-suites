@@ -12,6 +12,14 @@ Route SOSTAC planning requests to the paw-mkt-sostac skill and handle coordinati
 2. Check SOSTAC status (see `./sostac-status.md`) to know where to resume
 3. Tell user which phase comes next
 
+## HITL Review Gates
+
+The SOSTAC agent will pause for user review:
+- **After each phase** — User must approve before advancing to next phase
+- **After all 6 phases** — Final Plan Review Session with quality scorecard
+
+Do not auto-advance. Let the review gates work.
+
 ## How to Invoke
 
 When user needs SOSTAC planning (new or resuming):
