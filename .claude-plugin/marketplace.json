@@ -2,41 +2,42 @@
   "name": "agentic-marketing",
   "owner": {
     "name": "PawBytes",
-    "url": "https://github.com/gnoviawan"
+    "url": "https://github.com/pawbytes/agentic-marketing-suites"
   },
   "metadata": {
     "description": "Full-stack agentic marketing suite — 21 specialist skills covering strategy, channels, conversion, and growth",
-    "version": "0.3.0",
-    "repository": "https://github.com/gnoviawan/agentic-marketing"
+    "version": "0.3.5",
+    "repository": "https://github.com/pawbytes/agentic-marketing-suites"
   },
   "plugins": [
     {
-      "name": "agentic-marketing",
+      "name": "agentic-marketing-suites",
       "description": "21 marketing specialist skills: agency coordinator, SOSTAC planning, SEO, content, email, social, paid ads, video, PR, influencer, referral, CRO, retention, pricing, launch, sales, analytics, community, guerrilla, psychology, and product marketing context",
       "source": "./",
       "strict": false,
       "skills": [
-        "./skills/marketing-agency",
-        "./skills/marketing-analytics",
-        "./skills/marketing-community",
-        "./skills/marketing-content",
-        "./skills/marketing-cro",
-        "./skills/marketing-email",
-        "./skills/marketing-guerrilla",
-        "./skills/marketing-influencer",
-        "./skills/marketing-launch",
-        "./skills/marketing-paid-ads",
-        "./skills/marketing-pr",
-        "./skills/marketing-pricing",
-        "./skills/marketing-psychology",
-        "./skills/marketing-referral",
-        "./skills/marketing-retention",
-        "./skills/marketing-sales",
-        "./skills/marketing-seo",
-        "./skills/marketing-social",
-        "./skills/marketing-sostac",
-        "./skills/marketing-video",
-        "./skills/product-marketing-context"
+        "./skills/paw-mkt-setup",
+        "./skills/paw-mkt-agency",
+        "./skills/paw-mkt-analytics",
+        "./skills/paw-mkt-community",
+        "./skills/paw-mkt-content",
+        "./skills/paw-mkt-cro",
+        "./skills/paw-mkt-email",
+        "./skills/paw-mkt-guerrilla",
+        "./skills/paw-mkt-influencer",
+        "./skills/paw-mkt-launch",
+        "./skills/paw-mkt-paid-ads",
+        "./skills/paw-mkt-pr",
+        "./skills/paw-mkt-pricing",
+        "./skills/paw-mkt-psychology",
+        "./skills/paw-mkt-referral",
+        "./skills/paw-mkt-retention",
+        "./skills/paw-mkt-sales",
+        "./skills/paw-mkt-seo",
+        "./skills/paw-mkt-social",
+        "./skills/paw-mkt-sostac",
+        "./skills/paw-mkt-video",
+        "./skills/paw-mkt-product-context"
       ]
     }
   ]
