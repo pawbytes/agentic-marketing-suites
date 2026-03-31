@@ -1,6 +1,6 @@
 # Shared Skill Patterns
 
-Operational patterns referenced by the marketing analytics specialist. Apply these before starting any analytics work.
+These patterns are referenced by all marketing specialist skills. Read them as part of your operating instructions.
 
 ## Starting Context Router
 
@@ -15,8 +15,6 @@ Use when the user wants changes made or specified in an existing repository, sit
 ### Context C — Live Website URL Audit
 Use when the user provides a public URL for review. Audit the live experience first. If brand files are missing, use the live page and visible structure as the working source of truth.
 
----
-
 ## Pre-Flight: Read Strategic Context
 
 Before any specialist work, read these files in order when available:
@@ -28,30 +26,35 @@ Before any specialist work, read these files in order when available:
 
 If brand files are missing but a codebase or live URL is available, continue with that as the working source of truth rather than blocking progress.
 
----
+## Pre-Flight: Tool Discovery
 
-## Path Resolution: Campaign vs Brand-Level
+Before starting work that requires external tools, run the tool discovery script to check availability:
 
-**Campaign mode** — analyzing or reporting on a specific campaign:
-- Save campaign-specific reports to `./.pawbytes/marketing-suites/brands/{brand-slug}/campaigns/{type}-{campaign-slug}/performance/`
-- Read campaign strategy at `./.pawbytes/marketing-suites/brands/{brand-slug}/campaigns/{type}-{campaign-slug}/strategy.md`
+```bash
+# Run tool discovery
+./skills/paw-mkt-setup/assets/scripts/tool-discovery.sh --verbose
 
-**Brand-level mode** — overall analytics, measurement plans, and dashboards:
-- Save to `./.pawbytes/marketing-suites/brands/{brand-slug}/analytics/` (unchanged)
+# On Windows
+.\skills\paw-mkt-setup\assets\scripts\tool-discovery.bat --verbose
+```
 
-**Legacy fallback** — old directory structure detected:
-- Save to `./.pawbytes/marketing-suites/brands/{brand-slug}/analytics/`
-- Suggest migration for campaign-specific reports
+### Required Tools Check
 
-Analytics operates at both levels — brand-level measurement infrastructure plus campaign-specific performance reporting.
+| Tool | Check Command | Purpose |
+|------|---------------|---------|
+| `node` | `node --version` | JavaScript runtime |
+| `npm/npx` | `npm --version` | Package management |
+| `agent-browser` | `agent-browser --version` | Browser automation |
+| `python3` | `python3 --version` | Configuration scripts |
+| `git` | `git --version` | Version control |
 
----
+### Fallback Behavior
 
-## Research Mode: Analytics Audit Tools
+- If `agent-browser` is unavailable, use `WebFetch` and `WebSearch` MCP tools for research tasks
+- MCP tools have limitations: no authenticated sessions, limited JS rendering support
+- For best results, install agent-browser before research-heavy tasks
 
-Use agent-browser to run live performance audits before making recommendations. Check `./.pawbytes/marketing-suites/brands/{brand-slug}/sostac/00-auto-discovery.md` for audit data already collected.
-
-### agent-browser Setup
+## agent-browser Setup
 
 Before running browser-based research, check if `agent-browser` is available (`agent-browser --version`). If the command is not found, install it:
 
@@ -65,120 +68,153 @@ npm install -g agent-browser && npx playwright install chromium
 
 If installation fails, use `WebFetch` and `WebSearch` tools as alternatives for all research tasks.
 
-### Analytics Research Commands
+## Authenticated Browser Sessions
+
+For gated content (LinkedIn, Twitter/X, Facebook, competitor dashboards, etc.), use persistent browser profiles to maintain authentication.
+
+### Discover Chrome Profiles
 
 ```bash
-# PageSpeed Insights — CWV audit
-agent-browser --session analytics-research open "https://pagespeed.web.dev/report?url=https://{domain}" && agent-browser wait --load networkidle && agent-browser wait 8000
-agent-browser get text body
-# Extract: performance score, LCP, INP, CLS values, opportunities, diagnostics
+# List available Chrome profiles
+./skills/paw-mkt-setup/assets/scripts/chrome-profiles.sh --paths
 
-# Rich Results Test — structured data
-agent-browser --session analytics-research open "https://search.google.com/test/rich-results?url=https://{page-url}" && agent-browser wait --load networkidle && agent-browser wait 5000
-agent-browser get text body
-
-# Schema.org Validator
-agent-browser --session analytics-research open "https://validator.schema.org/#url=https://{domain}" && agent-browser wait --load networkidle && agent-browser wait 5000
-agent-browser get text body
-
-# Check tag implementation — navigate to page and inspect window globals
-agent-browser --session analytics-research open "https://{domain}" && agent-browser wait --load networkidle
-agent-browser eval --stdin <<'EVALEOF'
-JSON.stringify({
-  hasGA4: !!(window.gtag || window.dataLayer),
-  dataLayerLength: window.dataLayer ? window.dataLayer.length : 0,
-  hasPixel: !!(window.fbq),
-  hasTikTokPixel: !!(window.ttq),
-  hasHotjar: !!(window.hj),
-  hasIntercom: !!(window.Intercom)
-})
-EVALEOF
-# Extract: which tags are firing on page load
+# On Windows
+.\skills\paw-mkt-setup\assets\scripts\chrome-profiles.bat --paths
 ```
 
-Close session when done: `agent-browser --session analytics-research close`
+### Using Profiles with agent-browser
 
----
+```bash
+# Method 1: Direct profile path
+agent-browser --profile ~/.myapp-profile open https://linkedin.com
 
-## Response Protocol
+# Method 2: Environment variable (persists across commands)
+export AGENT_BROWSER_PROFILE=~/.myapp-profile
+agent-browser open https://linkedin.com
 
-When the user requests analytics work:
+# Method 3: Import auth from existing Chrome session
+# First, start Chrome with remote debugging:
+# macOS: /Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome --remote-debugging-port=9222
+# Windows: "C:\Program Files\Google\Chrome\Application\chrome.exe" --remote-debugging-port=9222
 
-1. **Route the starting context** (Starting Context Router). Decide whether this is strategy, codebase implementation, or live URL audit work.
-2. **Read the strongest available context** (Pre-Flight): brand and SOSTAC first when available; otherwise use the existing codebase or live site.
-3. **Clarify scope**: Tracking setup, dashboard creation, reporting, attribution, A/B testing, funnel optimization, ROI calculation, analytics audit, or full measurement strategy?
-   If working on a specific campaign, check `./.pawbytes/marketing-suites/brands/{brand-slug}/campaigns/{type}-{slug}/performance/` as well.
-4. **Assess current state**: Check `./.pawbytes/marketing-suites/brands/{brand-slug}/analytics/` for prior work and existing tracking, and if working in a codebase inspect the current instrumentation before proposing changes.
-5. **Deliver actionable output**: Specific measurement plans, tracking specs, dashboard designs, reports, and test plans — never vague advice.
-6. **Save deliverables**: Write all outputs to `./.pawbytes/marketing-suites/brands/{brand-slug}/analytics/`.
-7. **Recommend next steps**: What to implement first, what to measure next, when to review.
+# Then save the auth state:
+agent-browser --auto-connect state save ./my-auth.json
 
----
-
-## When to Escalate
-
-- No website or product yet — recommend foundational setup before analytics.
-- Tracking implementation requires developer access — document the spec for the dev team.
-- Complex data warehouse or ETL — recommend a data engineer.
-- Paid media optimization — route to Paid Ads specialist (paw-mkt-paid-ads) with findings.
-- Content gaps identified — route to Content Strategist (paw-mkt-content).
-- CRO requires UX changes — flag for design or development team.
-- Legal questions on GDPR/CCPA — recommend legal counsel.
-
----
-
-## Bidirectional Escalation Signals
-
-Analytics detects patterns that should trigger specialist involvement. When analysis reveals:
-
-| Pattern Detected | Escalate To | Signal |
-|---|---|---|
-| Conversion rate drop (10%+ week-over-week) | paw-mkt-cro | "Landing page or funnel friction detected" |
-| Churn rate spike or retention decline | paw-mkt-retention | "Churn anomaly requiring retention intervention" |
-| Email engagement decline (opens, clicks) | paw-mkt-email | "Email deliverability or content issue" |
-| Traffic quality shift (high bounce, low time on site) | paw-mkt-content or paw-mkt-paid-ads | "Traffic-source misalignment" |
-| Funnel stage drop-off concentration | paw-mkt-cro | "Specific step requiring optimization" |
-| Attribution model showing channel undervaluation | paw-mkt-paid-ads | "Budget reallocation opportunity" |
-
-When escalating, provide: the specific metric change, time period, comparison baseline, and preliminary hypothesis.
-
----
-
-## File Organization
-
-```
-./.pawbytes/marketing-suites/brands/{brand-slug}/analytics/
-  measurement-plan-{YYYY-MM-DD}.md
-  dashboard-spec-{type}-{YYYY-MM-DD}.md
-  report-template-{cadence}-{YYYY-MM-DD}.md
-  testing-roadmap-{YYYY-QN}.md
-  attribution-analysis-{YYYY-MM-DD}.md
-  roi-report-{YYYY-MM}.md
-  tracking/
-    gtm-data-layer-spec.md
-    event-tracking-spec.md
-    utm-log.md
-  .pawbytes/marketing-suites/reports/
-    weekly-snapshot-{YYYY-MM-DD}.md
-    monthly-report-{YYYY-MM}.md
-    quarterly-review-{YYYY-QN}.md
-  audits/
-    analytics-audit-{YYYY-MM-DD}.md
-
-# Campaign-level performance (when working on a specific campaign):
-./.pawbytes/marketing-suites/brands/{brand-slug}/campaigns/{type}-{slug}/performance/
-  report-{YYYY-MM-DD}.md
-  channel-breakdown-{YYYY-MM-DD}.md
+# Use saved auth in future sessions:
+agent-browser --state ./my-auth.json open https://linkedin.com
 ```
 
----
+### Authenticated Research Patterns
 
-## Output Contract
+#### LinkedIn Research (Requires Login)
+```bash
+# First run: login manually
+agent-browser --profile ~/.linkedin-profile open https://linkedin.com/login
+# ... complete login flow manually ...
 
-Analytics deliverables include:
-- **Analysis type**: tracking setup, dashboard, report, audit, A/B test plan, or attribution model
-- **Metrics covered**: which KPIs and metrics are measured or recommended
-- **Data sources**: which platforms and tools provide the data
-- **Findings**: key insights with supporting data points
-- **Recommendations**: prioritized actions based on the analysis
-- **File saved to**: path where the deliverable was written
+# All future runs: already authenticated
+agent-browser --profile ~/.linkedin-profile open "https://www.linkedin.com/search/results/people/?keywords=marketing"
+agent-browser get text body
+```
+
+#### Facebook Ads Library (Partial Auth)
+```bash
+# Public access available, but logged-in sees more
+agent-browser open "https://www.facebook.com/ads/library/?active_status=active&ad_type=all&country=ALL&q={brand-name}"
+agent-browser wait --load networkidle
+agent-browser get text body
+```
+
+#### Twitter/X Research (Requires Login)
+```bash
+# Use profile for authenticated access
+agent-browser --profile ~/.twitter-profile open "https://twitter.com/search?q={brand-name}"
+agent-browser wait --load networkidle
+agent-browser get text body
+```
+
+#### Competitor Dashboards (App Login Required)
+```bash
+# Login once, reuse session
+agent-browser --profile ~/.competitor-research open https://app.competitor.com/login
+# ... complete login ...
+
+# Later: access dashboard
+agent-browser --profile ~/.competitor-research open https://app.competitor.com/dashboard
+agent-browser screenshot ./research/competitor-dashboard.png
+agent-browser get text body
+```
+
+### Security Notes
+
+- Auth state files contain sensitive session tokens in plaintext
+- Add auth files to `.gitignore`
+- Use dedicated profiles for automation, not personal profiles
+- Consider using separate browser profiles per client/project
+
+## Common agent-browser Commands
+
+### Session Management
+```bash
+# Named session (shared context across commands)
+agent-browser --session research open https://example.com
+agent-browser --session research wait --load networkidle
+agent-browser --session research get text body
+agent-browser --session research close
+
+# Anonymous session (ephemeral)
+agent-browser open https://example.com
+agent-browser close
+```
+
+### Navigation & Interaction
+```bash
+# Open URL
+agent-browser open https://example.com
+
+# Wait for page load
+agent-browser wait --load networkidle
+agent-browser wait 2000  # Wait 2 seconds
+
+# Take screenshot
+agent-browser screenshot ./output/page.png
+agent-browser screenshot --full ./output/fullpage.png
+
+# Get page content
+agent-browser get text body
+agent-browser get html body
+
+# Interactive elements
+agent-browser snapshot -i  # Get interactive elements with refs
+agent-browser click @e1    # Click element by ref
+agent-browser fill @e2 "search term"  # Fill input
+```
+
+### Research Workflow
+```bash
+# Standard research session
+agent-browser --session research open "https://example.com/pricing"
+agent-browser wait --load networkidle
+agent-browser screenshot ./screenshots/pricing-page.png
+agent-browser get text body
+agent-browser --session research close
+```
+
+## Fallback: WebFetch/WebSearch
+
+When `agent-browser` is unavailable, use MCP tools:
+
+```
+# Use WebSearch for discovery
+WebSearch: "competitor pricing comparison [industry]"
+
+# Use WebFetch for specific pages
+WebFetch: https://example.com/pricing
+Prompt: Extract pricing tiers, features, and pricing model details
+```
+
+### Limitations of MCP Tools
+- No JavaScript rendering (SPA content may be missing)
+- No authenticated sessions (gated content inaccessible)
+- No interactive elements (forms, buttons)
+- Limited to publicly accessible pages
