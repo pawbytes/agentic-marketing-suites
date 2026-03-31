@@ -1,0 +1,87 @@
+[
+  {
+    "name": "bmad-agent-marketing-pr",
+    "description": "Media relations, press releases, journalist outreach, crisis comms, and reputation management. Use when user requests press release, media outreach, journalist pitch, crisis comms, reputation management, or PR strategy.",
+    "capabilities": [
+      { "name": "Research & Intelligence", "args": {}, "outputs": [] },
+      { "name": "PR Strategy", "args": {}, "outputs": [] },
+      { "name": "Media Relations", "args": {}, "outputs": [] },
+      { "name": "Press Releases", "args": {}, "outputs": [] },
+      { "name": "Journalist Outreach", "args": {}, "outputs": [] },
+      { "name": "Digital PR Campaigns", "args": {}, "outputs": [] },
+      { "name": "Crisis Communications", "args": {}, "outputs": [] },
+      { "name": "Reputation Management", "args": {}, "outputs": [] },
+      { "name": "Media Kit & Press Page", "args": {}, "outputs": [] },
+      { "name": "Spokesperson Preparation", "args": {}, "outputs": [] },
+      { "name": "Performance Metrics", "args": {}, "outputs": [] },
+      { "name": "Modern PR Practices", "args": {}, "outputs": [] },
+      { "name": "Outputs & Deliverables", "args": {}, "outputs": [] }
+    ],
+    "dependencies": []
+  },
+  {
+    "name": "bmad-agent-marketing-pricing",
+    "description": "Pricing models, tier packaging, willingness-to-pay research. Use when pricing tiers, freemium, value metric, pricing page, willing to pay, van Westendorp.",
+    "capabilities": [
+      { "name": "Pricing Diagnosis", "args": {}, "outputs": [] },
+      { "name": "Value Metric Selection", "args": {}, "outputs": [] },
+      { "name": "Tier Structure Design", "args": {}, "outputs": [] },
+      { "name": "Pricing Page Strategy", "args": {}, "outputs": [] },
+      { "name": "Price Increase Execution", "args": {}, "outputs": [] },
+      { "name": "Pricing Research Methods", "args": {}, "outputs": [] },
+      { "name": "Segment-Specific Pricing", "args": {}, "outputs": [] },
+      { "name": "Shared Patterns", "args": {}, "outputs": [] }
+    ],
+    "dependencies": []
+  },
+  {
+    "name": "bmad-agent-marketing-psychology",
+    "description": "Applies behavioral science and persuasion frameworks to marketing decisions. Triggers for cognitive bias, loss aversion, social proof, scarcity, Cialdini, persuasion framework.",
+    "capabilities": [
+      { "name": "Cognitive Biases", "args": {}, "outputs": [] },
+      { "name": "Cialdini Six Principles", "args": {}, "outputs": [] },
+      { "name": "Pricing Psychology", "args": {}, "outputs": [] },
+      { "name": "Behavioral Design (BJ Fogg)", "args": {}, "outputs": [] },
+      { "name": "Copy Frameworks", "args": {}, "outputs": [] },
+      { "name": "Psychology by Context", "args": {}, "outputs": [] },
+      { "name": "Ethics & Dark Patterns", "args": {}, "outputs": [] },
+      { "name": "Diagnostic & Protocol", "args": {}, "outputs": [] },
+      { "name": "Quick Reference Table", "args": {}, "outputs": [] },
+      { "name": "Strategic Mental Models", "args": {}, "outputs": [] }
+    ],
+    "dependencies": []
+  },
+  {
+    "name": "bmad-agent-marketing-referral",
+    "description": "Referral and partnership marketing strategist. Use when referral program, affiliate, partner program, refer-a-friend, word-of-mouth, commission structure.",
+    "capabilities": [
+      { "name": "Referral Program Design", "args": {}, "outputs": [] },
+      { "name": "Affiliate Program", "args": {}, "outputs": [] },
+      { "name": "Strategic Partnerships", "args": {}, "outputs": [] },
+      { "name": "Co-Marketing", "args": {}, "outputs": [] },
+      { "name": "Word-of-Mouth Amplification", "args": {}, "outputs": [] },
+      { "name": "Viral Loop Design", "args": {}, "outputs": [] },
+      { "name": "Technology and Tools", "args": {}, "outputs": [] },
+      { "name": "Metrics and Measurement", "args": {}, "outputs": [] },
+      { "name": "Modern Practices", "args": {}, "outputs": [] },
+      { "name": "Outputs and Deliverables", "args": {}, "outputs": [] }
+    ],
+    "dependencies": []
+  },
+  {
+    "name": "bmad-agent-marketing-retention",
+    "description": "Reduce churn through cancel flows, dunning, health scoring, win-back. Use when churn, cancel flow, dunning, win-back, failed payment, retention rate, save offer.",
+    "capabilities": [
+      { "name": "Churn Diagnosis", "args": {}, "outputs": [] },
+      { "name": "Cancel Flow Design", "args": {}, "outputs": [] },
+      { "name": "Proactive Retention", "args": {}, "outputs": [] },
+      { "name": "Payment Recovery & Dunning", "args": {}, "outputs": [] },
+      { "name": "Win-Back Campaigns", "args": {}, "outputs": [] },
+      { "name": "Metrics & Benchmarks", "args": {}, "outputs": [] },
+      { "name": "Research Mode", "args": {}, "outputs": [] },
+      { "name": "Shared Patterns", "args": {}, "outputs": [] },
+      { "name": "Cancel Flow Templates", "args": {}, "outputs": [] }
+    ],
+    "dependencies": []
+  }
+]

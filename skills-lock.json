@@ -1,0 +1,30 @@
+{
+  "version": 1,
+  "skills": {
+    "agent-browser": {
+      "source": "vercel-labs/agent-browser",
+      "sourceType": "github",
+      "computedHash": "b107e5c471729cce17c0463c21415393054782d60b349d2f0eb64cbbdeabff15"
+    },
+    "bmad-agent-builder": {
+      "source": "bmad-code-org/bmad-builder",
+      "sourceType": "github",
+      "computedHash": "0047afe90aa625b2f0b0f73709cf2cfffe2e0615027b9041063362e836aeb85a"
+    },
+    "bmad-bmb-setup": {
+      "source": "bmad-code-org/bmad-builder",
+      "sourceType": "github",
+      "computedHash": "4cc80c696ddeec40b8a01a90dd18483ecc56fdbf7fb41a54e8ae966fab0a1093"
+    },
+    "bmad-module-builder": {
+      "source": "bmad-code-org/bmad-builder",
+      "sourceType": "github",
+      "computedHash": "32d460ec0bf77a4aacea00110580367c057e2ef24b3f44aeb74e08b33b06b9f8"
+    },
+    "bmad-workflow-builder": {
+      "source": "bmad-code-org/bmad-builder",
+      "sourceType": "github",
+      "computedHash": "f68df102c57c0d92506117b16a006be221a84232d90845fc5aa21e408e9797a1"
+    }
+  }
+}

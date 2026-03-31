@@ -1,0 +1,36 @@
+# Brand data — contains client/proprietary information
+brands/
+
+# Agent runtime directories (installed dependencies, not source)
+.agents/
+.claude/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Editor
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Logs
+*.log
+npm-debug.log*
+
+# Environment
+.env
+.env.local
+.env.*.local
+
+# Node
+node_modules/
+
+# Skill-creator eval workspaces
+*-workspace/
+/_bmad
+/extracted-frameworks
+/skills/reports
+.pawybytes/
+/.pawbytes
