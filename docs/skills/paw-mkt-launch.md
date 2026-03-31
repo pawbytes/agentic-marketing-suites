@@ -6,7 +6,7 @@ Coordinates product, feature, or company launches across channels. Covers strate
 
 ## When to use it
 
-Use `/marketing-launch` when you need:
+Use `/paw-mkt-launch` when you need:
 - launch strategy or GTM plan
 - announcement sequencing
 - launch-day planning and checklist
@@ -61,21 +61,21 @@ brands/{brand-slug}/campaigns/launch/
 ## Sample prompts
 
 ```text
-/marketing-launch
+/paw-mkt-launch
 Create a launch plan for our new feature.
 ```
 
 ```text
-/marketing-launch
+/paw-mkt-launch
 For Northstar AI, build a 30-day go-to-market plan for our recruiting scorecard release.
 ```
 
 ```text
-/marketing-launch
+/paw-mkt-launch
 Use our completed SOSTAC plan to create the cross-channel launch brief, then identify which assets should be handed off to email, social, PR, and paid ads.
 ```
 
 ```text
-/marketing-launch
+/paw-mkt-launch
 We're launching on Product Hunt in 2 weeks. Build the full pre-launch checklist and content plan.
 ```

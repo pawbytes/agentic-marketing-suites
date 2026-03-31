@@ -6,7 +6,7 @@ Creates or updates the deep positioning file every specialist should read before
 
 ## When to use it
 
-Use `/product-marketing-context` when:
+Use `/paw-mkt-product-context` when:
 - output feels generic or off-brand
 - you want better personas, objections, and proof points captured
 - SOSTAC is complete and you want a distilled reference
@@ -42,7 +42,7 @@ A 12-section positioning document covering:
 ## Output location
 
 ```text
-brands/{brand-slug}/product-marketing-context.md
+brands/{brand-slug}/paw-mkt-product-context.md
 ```
 
 ## Related skills
@@ -58,16 +58,16 @@ All specialists benefit from this file, especially:
 ## Sample prompts
 
 ```text
-/product-marketing-context
+/paw-mkt-product-context
 Create the product marketing context for our brand.
 ```
 
 ```text
-/product-marketing-context
+/paw-mkt-product-context
 Use our completed SOSTAC plan to build this file, then ask me only about missing customer language and proof points.
 ```
 
 ```text
-/product-marketing-context
+/paw-mkt-product-context
 Refresh our existing positioning document with new objections, proof, and customer phrases from recent calls.
 ```

@@ -6,7 +6,7 @@ Handles measurement, tracking, reporting, and performance analysis.
 
 ## When to use it
 
-Use `/marketing-analytics` when you need:
+Use `/paw-mkt-analytics` when you need:
 - tracking plans
 - event naming or UTM standards
 - dashboard and reporting structure
@@ -69,16 +69,16 @@ Often including tracking, reports, and audit subfolders.
 ## Sample prompts
 
 ```text
-/marketing-analytics
+/paw-mkt-analytics
 Audit our current marketing tracking setup.
 ```
 
 ```text
-/marketing-analytics
+/paw-mkt-analytics
 Create a reporting framework for paid ads, SEO, lifecycle email, and sign-up conversion.
 ```
 
 ```text
-/marketing-analytics
+/paw-mkt-analytics
 Use our SOSTAC control phase and build a practical KPI dashboard spec.
 ```

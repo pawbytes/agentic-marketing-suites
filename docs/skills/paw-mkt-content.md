@@ -6,7 +6,7 @@ Plans and creates content strategy, calendars, briefs, and long-form assets.
 
 ## When to use it
 
-Use `/marketing-content` when you need:
+Use `/paw-mkt-content` when you need:
 - a content strategy
 - a monthly editorial calendar
 - blog briefs or drafts
@@ -72,16 +72,16 @@ Common outputs include:
 ## Sample prompts
 
 ```text
-/marketing-content
+/paw-mkt-content
 Create a content strategy for the next quarter.
 ```
 
 ```text
-/marketing-content
+/paw-mkt-content
 For Northstar AI, build a monthly content calendar around recruiting automation, call summaries, and hiring pipeline analytics.
 ```
 
 ```text
-/marketing-content
+/paw-mkt-content
 Use our SOSTAC plan and product marketing context to draft three bottom-of-funnel article briefs.
 ```

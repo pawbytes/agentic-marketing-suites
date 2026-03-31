@@ -5,16 +5,16 @@ Use this workflow when you need one deliverable now and do not want to stop for 
 ## Best starting commands
 
 ```text
-/marketing-agency
+/paw-mkt-agency
 ```
 
 or a direct specialist such as:
 
 ```text
-/marketing-social
-/marketing-email
-/marketing-seo
-/marketing-cro
+/paw-mkt-social
+/paw-mkt-email
+/paw-mkt-seo
+/paw-mkt-cro
 ```
 
 ## When this path makes sense
@@ -50,27 +50,27 @@ Even for a quick task, try to include:
 
 ### Basic
 ```text
-/marketing-social
+/paw-mkt-social
 Write one LinkedIn post for our new feature launch.
 ```
 
 ### With brand context
 ```text
-/marketing-email
+/paw-mkt-email
 For Northstar AI, write a 4-email nurture sequence for talent leaders who downloaded our hiring scorecard.
 ```
 
 ### Coordinator route
 ```text
-/marketing-agency
+/paw-mkt-agency
 I don't want a full strategy right now. I just need a conversion-focused landing page outline for our webinar signup.
 ```
 
 ## What usually happens next
 
 If the quick task works and you want to scale:
-- create or refresh `product-marketing-context.md`
-- run `/marketing-sostac`
+- create or refresh `product-marketing-context.md` (via `/paw-mkt-product-context`)
+- run `/paw-mkt-sostac`
 - move into broader implementation
 
 ## Related pages

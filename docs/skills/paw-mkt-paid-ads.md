@@ -6,7 +6,7 @@ Builds paid acquisition strategy, creative, campaign structure, testing plans, a
 
 ## When to use it
 
-Use `/marketing-paid-ads` when you need:
+Use `/paw-mkt-paid-ads` when you need:
 - campaign planning
 - ad copy and creative angles
 - audience targeting ideas
@@ -46,16 +46,16 @@ brands/{brand-slug}/campaigns/paid-ads/
 ## Sample prompts
 
 ```text
-/marketing-paid-ads
+/paw-mkt-paid-ads
 Build a paid acquisition plan for our next quarter.
 ```
 
 ```text
-/marketing-paid-ads
+/paw-mkt-paid-ads
 For Acorn Legal, create a Meta and Google Ads campaign brief to drive demo requests.
 ```
 
 ```text
-/marketing-paid-ads
+/paw-mkt-paid-ads
 Use our SOSTAC tactics and product marketing context to draft three ad angles plus matching audience specs.
 ```

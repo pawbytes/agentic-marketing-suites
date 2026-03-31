@@ -6,7 +6,7 @@ Focuses on churn reduction, lifecycle recovery, and engagement systems that keep
 
 ## When to use it
 
-Use `/marketing-retention` when you need:
+Use `/paw-mkt-retention` when you need:
 - churn diagnosis
 - cancel-flow design or improvements
 - dunning sequences for failed payments
@@ -65,21 +65,21 @@ brands/{brand-slug}/campaigns/retention/
 ## Sample prompts
 
 ```text
-/marketing-retention
+/paw-mkt-retention
 Help us reduce churn.
 ```
 
 ```text
-/marketing-retention
+/paw-mkt-retention
 Build a win-back plan for users who canceled in the last 90 days.
 ```
 
 ```text
-/marketing-retention
+/paw-mkt-retention
 Use our lifecycle data and customer objections to redesign our cancel flow.
 ```
 
 ```text
-/marketing-retention
+/paw-mkt-retention
 Write a dunning sequence for failed payments — 3 emails, escalating urgency.
 ```

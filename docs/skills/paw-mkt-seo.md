@@ -6,7 +6,7 @@ Covers technical SEO, content SEO, programmatic SEO (pSEO), local SEO, link buil
 
 ## When to use it
 
-Use `/marketing-seo` when you need:
+Use `/paw-mkt-seo` when you need:
 - a technical or content SEO audit
 - keyword research
 - content briefs for search
@@ -68,21 +68,21 @@ If unsure which mode applies, the skill will ask.
 ## Sample prompts
 
 ```text
-/marketing-seo
+/paw-mkt-seo
 Run a technical and content SEO audit.
 ```
 
 ```text
-/marketing-seo
+/paw-mkt-seo
 For Northstar AI, build keyword research around recruiting automation, interview notes, and candidate scorecards.
 ```
 
 ```text
-/marketing-seo
+/paw-mkt-seo
 Use our SOSTAC plan and product marketing context to create three high-intent SEO briefs.
 ```
 
 ```text
-/marketing-seo
+/paw-mkt-seo
 Design a programmatic SEO strategy for our location-based landing pages.
 ```

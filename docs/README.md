@@ -20,51 +20,51 @@ Use this docs set to understand how the suite works, where to start, what each s
 ## Skill reference
 
 ### Coordinator and planning
-- [marketing-agency](skills/marketing-agency.md)
-- [marketing-sostac](skills/marketing-sostac.md)
-- [product-marketing-context](skills/product-marketing-context.md)
+- [paw-mkt-agency](skills/paw-mkt-agency.md)
+- [paw-mkt-sostac](skills/paw-mkt-sostac.md)
+- [paw-mkt-product-context](skills/paw-mkt-product-context.md)
 
 ### Channel execution
-- [marketing-content](skills/marketing-content.md)
-- [marketing-email](skills/marketing-email.md)
-- [marketing-seo](skills/marketing-seo.md)
-- [marketing-social](skills/marketing-social.md)
-- [marketing-video](skills/marketing-video.md)
-- [marketing-paid-ads](skills/marketing-paid-ads.md)
-- [marketing-pr](skills/marketing-pr.md)
-- [marketing-influencer](skills/marketing-influencer.md)
-- [marketing-referral](skills/marketing-referral.md)
-- [marketing-community](skills/marketing-community.md)
-- [marketing-guerrilla](skills/marketing-guerrilla.md)
+- [paw-mkt-content](skills/paw-mkt-content.md)
+- [paw-mkt-email](skills/paw-mkt-email.md)
+- [paw-mkt-seo](skills/paw-mkt-seo.md)
+- [paw-mkt-social](skills/paw-mkt-social.md)
+- [paw-mkt-video](skills/paw-mkt-video.md)
+- [paw-mkt-paid-ads](skills/paw-mkt-paid-ads.md)
+- [paw-mkt-pr](skills/paw-mkt-pr.md)
+- [paw-mkt-influencer](skills/paw-mkt-influencer.md)
+- [paw-mkt-referral](skills/paw-mkt-referral.md)
+- [paw-mkt-community](skills/paw-mkt-community.md)
+- [paw-mkt-guerrilla](skills/paw-mkt-guerrilla.md)
 
 ### Conversion and revenue
-- [marketing-cro](skills/marketing-cro.md)
-- [marketing-retention](skills/marketing-retention.md)
-- [marketing-pricing](skills/marketing-pricing.md)
-- [marketing-launch](skills/marketing-launch.md)
-- [marketing-sales](skills/marketing-sales.md)
-- [marketing-psychology](skills/marketing-psychology.md)
+- [paw-mkt-cro](skills/paw-mkt-cro.md)
+- [paw-mkt-retention](skills/paw-mkt-retention.md)
+- [paw-mkt-pricing](skills/paw-mkt-pricing.md)
+- [paw-mkt-launch](skills/paw-mkt-launch.md)
+- [paw-mkt-sales](skills/paw-mkt-sales.md)
+- [paw-mkt-psychology](skills/paw-mkt-psychology.md)
 
 ### Measurement
-- [marketing-analytics](skills/marketing-analytics.md)
+- [paw-mkt-analytics](skills/paw-mkt-analytics.md)
 
 ## How the suite usually flows
 
 ```mermaid
 flowchart TD
-    A["#sol;marketing-agency"] --> B{Strategy already exists?}
-    B -- No --> C["#sol;marketing-sostac"]
-    C --> D["#sol;product-marketing-context"]
+    A["#sol;paw-mkt-agency"] --> B{Strategy already exists?}
+    B -- No --> C["#sol;paw-mkt-sostac"]
+    C --> D["#sol;paw-mkt-product-context"]
     B -- Yes --> D
     D --> E[Specialist skills]
     E --> F["Write to brands/brand-slug/"]
-    F --> G["#sol;marketing-analytics + 06-control.md"]
+    F --> G["#sol;paw-mkt-analytics + 06-control.md"]
 ```
 
 ## Recommended ways to use the suite
 
 ### 1. Full strategic build
-Start with `/marketing-agency` or `/marketing-sostac` when you want a durable, cross-channel plan.
+Start with `/paw-mkt-agency` or `/paw-mkt-sostac` when you want a durable, cross-channel plan.
 
 ### 2. Execution from an existing plan
 If a brand already has SOSTAC files, create or refresh `product-marketing-context.md` and then run the specialist skills tied to the tactics.

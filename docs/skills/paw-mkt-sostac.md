@@ -16,7 +16,7 @@ The user should feel like they hired a strategist who shows up prepared, not one
 
 ## When to use it
 
-Use `/marketing-sostac` when:
+Use `/paw-mkt-sostac` when:
 - you need a full marketing plan
 - your current tactics feel disconnected
 - you want strategy saved to files for future sessions
@@ -88,16 +88,16 @@ SWOT+TOWS, PESTLE, Porter's Five Forces, TAM/SAM/SOM, JTBD, OKR, RACE, STP, Anso
 ## Sample prompts
 
 ```text
-/marketing-sostac
+/paw-mkt-sostac
 Build a complete marketing plan for our brand.
 ```
 
 ```text
-/marketing-sostac
+/paw-mkt-sostac
 Continue the existing SOSTAC plan for Acorn Legal from the next incomplete phase.
 ```
 
 ```text
-/marketing-sostac
+/paw-mkt-sostac
 We sell a workflow tool for recruiting teams. We need a strategy before investing more in SEO, paid ads, and email.
 ```

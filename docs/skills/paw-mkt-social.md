@@ -6,7 +6,7 @@ Plans and creates organic social strategy, calendars, and platform-specific cont
 
 ## When to use it
 
-Use `/marketing-social` when you need:
+Use `/paw-mkt-social` when you need:
 - a social content calendar
 - platform strategy
 - post ideas and captions
@@ -46,16 +46,16 @@ brands/{brand-slug}/content/social/
 ## Sample prompts
 
 ```text
-/marketing-social
+/paw-mkt-social
 Create a monthly social plan.
 ```
 
 ```text
-/marketing-social
+/paw-mkt-social
 For Acorn Legal, build a LinkedIn-first strategy for reaching managing partners at small firms.
 ```
 
 ```text
-/marketing-social
+/paw-mkt-social
 Use our launch messaging to draft a week of social posts across LinkedIn and X.
 ```

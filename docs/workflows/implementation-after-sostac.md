@@ -10,7 +10,7 @@ Turn the strategy into channel-specific deliverables without losing the context 
 
 1. Load the brand workspace
 2. Read the completed SOSTAC plan, especially `04-tactics.md` and `05-action.md`
-3. Create or refresh `product-marketing-context.md`
+3. Create or refresh `product-marketing-context.md` (via `/paw-mkt-product-context`)
 4. Run the specialist skills that match the tactics
 5. Save outputs into the brand workspace
 6. Use analytics and control files to measure progress
@@ -46,19 +46,19 @@ flowchart TD
 
 ### Basic
 ```text
-/marketing-agency
+/paw-mkt-agency
 Our SOSTAC plan is complete. Help me start implementation.
 ```
 
 ### Direct specialist kickoff
 ```text
-/marketing-content
+/paw-mkt-content
 Use the completed SOSTAC plan for LumenOps and create a monthly content calendar plus three high-priority briefs.
 ```
 
 ### Context-first execution
 ```text
-/product-marketing-context
+/paw-mkt-product-context
 Extract what you can from our completed SOSTAC plan, then fill the remaining gaps so downstream specialists can work from stronger positioning.
 ```
 

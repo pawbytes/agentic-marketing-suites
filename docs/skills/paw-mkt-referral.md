@@ -6,7 +6,7 @@ Designs referral, affiliate, and partner-driven growth systems.
 
 ## When to use it
 
-Use `/marketing-referral` when you need:
+Use `/paw-mkt-referral` when you need:
 - a referral program
 - incentive design
 - affiliate structure
@@ -66,16 +66,16 @@ brands/{brand-slug}/campaigns/referral/
 ## Sample prompts
 
 ```text
-/marketing-referral
+/paw-mkt-referral
 Design a referral program for our product.
 ```
 
 ```text
-/marketing-referral
+/paw-mkt-referral
 For Northstar AI, create a referral model that rewards talent leaders for introducing peers at similar companies.
 ```
 
 ```text
-/marketing-referral
+/paw-mkt-referral
 Use our retention strategy and audience profile to design an affiliate or partner-led growth loop.
 ```

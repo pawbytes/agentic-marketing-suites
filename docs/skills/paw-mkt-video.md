@@ -6,7 +6,7 @@ Handles short-form, YouTube, live streaming, ad scripts, and video production pl
 
 ## When to use it
 
-Use `/marketing-video` when you need:
+Use `/paw-mkt-video` when you need:
 - short-form video ideas or scripts
 - a YouTube strategy
 - video briefs or storyboards
@@ -71,16 +71,16 @@ Common subfolders:
 ## Sample prompts
 
 ```text
-/marketing-video
+/paw-mkt-video
 Create five short-form video concepts for our product.
 ```
 
 ```text
-/marketing-video
+/paw-mkt-video
 Build a YouTube strategy for Northstar AI focused on recruiting ops education.
 ```
 
 ```text
-/marketing-video
+/paw-mkt-video
 Use our launch plan to script three vertical videos for LinkedIn, Reels, and TikTok.
 ```

@@ -6,7 +6,7 @@ Creates sales enablement assets and messaging systems for the revenue team. Cove
 
 ## When to use it
 
-Use `/marketing-sales` when you need:
+Use `/paw-mkt-sales` when you need:
 - sales decks or pitch decks
 - one-pagers
 - objection handling docs
@@ -71,21 +71,21 @@ brands/{brand-slug}/campaigns/sales/
 ## Sample prompts
 
 ```text
-/marketing-sales
+/paw-mkt-sales
 Create a one-pager for our product.
 ```
 
 ```text
-/marketing-sales
+/paw-mkt-sales
 For Acorn Legal, build objection-handling and demo messaging for small law firm owners.
 ```
 
 ```text
-/marketing-sales
+/paw-mkt-sales
 Use our positioning, proof points, and pricing strategy to draft a sales deck outline.
 ```
 
 ```text
-/marketing-sales
+/paw-mkt-sales
 Build a battle card for our main competitor.
 ```

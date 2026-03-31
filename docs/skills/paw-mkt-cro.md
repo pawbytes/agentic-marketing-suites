@@ -6,7 +6,7 @@ Improves conversion across landing pages, flows, onboarding, paywalls, and forms
 
 ## When to use it
 
-Use `/marketing-cro` when you need:
+Use `/paw-mkt-cro` when you need:
 - landing page improvements
 - signup or checkout optimization
 - onboarding activation analysis
@@ -44,16 +44,16 @@ brands/{brand-slug}/campaigns/cro/
 ## Sample prompts
 
 ```text
-/marketing-cro
+/paw-mkt-cro
 Audit our homepage-to-signup flow.
 ```
 
 ```text
-/marketing-cro
+/paw-mkt-cro
 We get traffic but weak trial conversion. Build a prioritized CRO plan for our pricing and signup pages.
 ```
 
 ```text
-/marketing-cro
+/paw-mkt-cro
 Use our audience objections and product marketing context to improve our webinar landing page.
 ```

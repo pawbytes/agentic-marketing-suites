@@ -6,7 +6,7 @@ Designs unconventional, high-leverage campaigns for attention and growth. Covers
 
 ## When to use it
 
-Use `/marketing-guerrilla` when you need:
+Use `/paw-mkt-guerrilla` when you need:
 - low-budget attention plays
 - viral campaign design
 - growth experiment planning and tracking
@@ -72,21 +72,21 @@ brands/{brand-slug}/campaigns/guerrilla/
 ## Sample prompts
 
 ```text
-/marketing-guerrilla
+/paw-mkt-guerrilla
 Give us three low-budget guerrilla campaign concepts.
 ```
 
 ```text
-/marketing-guerrilla
+/paw-mkt-guerrilla
 For Acorn Legal, design an unconventional awareness campaign that reaches small law firm owners without relying on paid ads.
 ```
 
 ```text
-/marketing-guerrilla
+/paw-mkt-guerrilla
 Use our positioning and budget constraints to create one bold launch stunt plus a safer backup version.
 ```
 
 ```text
-/marketing-guerrilla
+/paw-mkt-guerrilla
 Build us a growth experiment dashboard for 10 experiments we want to run this quarter.
 ```

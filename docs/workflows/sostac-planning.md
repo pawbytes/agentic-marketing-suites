@@ -5,10 +5,10 @@ Use this workflow when you want a full strategy before running channel execution
 ## Best starting command
 
 ```text
-/marketing-sostac
+/paw-mkt-sostac
 ```
 
-You can also start with `/marketing-agency`, which will route you here when planning is missing.
+You can also start with `/paw-mkt-agency`, which will route you here when planning is missing.
 
 ## What SOSTAC creates
 
@@ -81,36 +81,36 @@ Bring as much of this as you can:
 ## After planning
 
 A complete plan usually leads into:
-- `/product-marketing-context`
-- `/marketing-content`
-- `/marketing-seo`
-- `/marketing-email`
-- `/marketing-social`
-- `/marketing-paid-ads`
-- `/marketing-analytics`
+- `/paw-mkt-product-context`
+- `/paw-mkt-content`
+- `/paw-mkt-seo`
+- `/paw-mkt-email`
+- `/paw-mkt-social`
+- `/paw-mkt-paid-ads`
+- `/paw-mkt-analytics`
 
 ## Sample prompts
 
 ### Basic
 ```text
-/marketing-sostac
+/paw-mkt-sostac
 Let's build a marketing plan for our brand.
 ```
 
 ### Resume an in-progress plan
 ```text
-/marketing-sostac
+/paw-mkt-sostac
 Continue the SOSTAC plan for BrightLedger from the next incomplete phase.
 ```
 
 ### Strategy-first prompt
 ```text
-/marketing-sostac
+/paw-mkt-sostac
 We're scaling a B2B workflow tool and need a full 6-phase marketing plan before we invest further in content, paid ads, and lifecycle email.
 ```
 
 ## Related pages
 
 - [Implementation after SOSTAC](implementation-after-sostac.md)
-- [Product marketing context](../skills/product-marketing-context.md)
+- [Product marketing context](../skills/paw-mkt-product-context.md)
 - [Deliverables and file locations](../reference/deliverables-and-file-locations.md)

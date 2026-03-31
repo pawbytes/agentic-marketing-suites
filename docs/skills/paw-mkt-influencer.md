@@ -6,7 +6,7 @@ Builds influencer and creator partnership strategies, outreach, and campaign pla
 
 ## When to use it
 
-Use `/marketing-influencer` when you need:
+Use `/paw-mkt-influencer` when you need:
 - creator discovery criteria
 - outreach sequences
 - influencer campaign planning
@@ -61,16 +61,16 @@ brands/{brand-slug}/campaigns/influencer/
 ## Sample prompts
 
 ```text
-/marketing-influencer
+/paw-mkt-influencer
 Build an influencer strategy for our product.
 ```
 
 ```text
-/marketing-influencer
+/paw-mkt-influencer
 For Acorn Legal, identify the best creator profile types for trust-building among small law firm owners.
 ```
 
 ```text
-/marketing-influencer
+/paw-mkt-influencer
 Use our launch campaign and audience profile to plan a micro-influencer push.
 ```

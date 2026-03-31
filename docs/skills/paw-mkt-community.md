@@ -6,7 +6,7 @@ Builds community-led growth systems and engagement programs.
 
 ## When to use it
 
-Use `/marketing-community` when you need:
+Use `/paw-mkt-community` when you need:
 - a community strategy
 - a 90-day community launch plan
 - engagement programming and content calendar
@@ -70,16 +70,16 @@ brands/{brand-slug}/campaigns/community/
 ## Sample prompts
 
 ```text
-/marketing-community
+/paw-mkt-community
 Help us design a customer community.
 ```
 
 ```text
-/marketing-community
+/paw-mkt-community
 Create a launch plan for a private Slack group for recruiting leaders.
 ```
 
 ```text
-/marketing-community
+/paw-mkt-community
 Use our retention goals to design a member engagement program that increases advocacy.
 ```

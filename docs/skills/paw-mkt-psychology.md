@@ -6,7 +6,7 @@ Applies behavioral science and persuasion patterns to messaging, offers, and UX.
 
 ## When to use it
 
-Use `/marketing-psychology` when you need:
+Use `/paw-mkt-psychology` when you need:
 - stronger persuasion in copy
 - framing help for offers or pages
 - objection-handling ideas
@@ -57,16 +57,16 @@ This skill is often advisory and may write into the active deliverable rather th
 ## Sample prompts
 
 ```text
-/marketing-psychology
+/paw-mkt-psychology
 Review our homepage messaging and suggest stronger persuasion patterns.
 ```
 
 ```text
-/marketing-psychology
+/paw-mkt-psychology
 Use our audience objections to improve the framing of our webinar signup page.
 ```
 
 ```text
-/marketing-psychology
+/paw-mkt-psychology
 Audit this launch copy for weak framing, trust gaps, and missed behavioral triggers.
 ```

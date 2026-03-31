@@ -19,10 +19,10 @@ A six-phase marketing planning model:
 - Control
 
 ## Auto-Discovery
-The pre-interview research phase used by `/marketing-sostac` before Phase 1.
+The pre-interview research phase used by `/paw-mkt-sostac` before Phase 1.
 
 ## Specialist skill
-A focused skill such as `/marketing-seo` or `/marketing-email` that executes one discipline well.
+A focused skill such as `/paw-mkt-seo` or `/paw-mkt-email` that executes one discipline well.
 
 ## Handoff
 The transition from one skill's output into another skill's work.

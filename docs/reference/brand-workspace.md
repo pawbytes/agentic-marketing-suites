@@ -42,7 +42,7 @@ The deeper positioning layer:
 - voice guidance
 
 ### `sostac/`
-The strategic planning folder built by `/marketing-sostac`.
+The strategic planning folder built by `/paw-mkt-sostac`.
 
 ### `campaigns/`
 Execution plans, experiments, and campaign systems.

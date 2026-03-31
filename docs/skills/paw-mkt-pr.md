@@ -6,7 +6,7 @@ Supports earned media, press outreach, narrative shaping, and reputation-sensiti
 
 ## When to use it
 
-Use `/marketing-pr` when you need:
+Use `/paw-mkt-pr` when you need:
 - a press release
 - media outreach strategy
 - a media list
@@ -71,16 +71,16 @@ Often using subfolders such as:
 ## Sample prompts
 
 ```text
-/marketing-pr
+/paw-mkt-pr
 Write a press release for our launch.
 ```
 
 ```text
-/marketing-pr
+/paw-mkt-pr
 Create a media outreach plan for Northstar AI around recruiting operations automation.
 ```
 
 ```text
-/marketing-pr
+/paw-mkt-pr
 Use our launch strategy and proof points to build a founder-led thought leadership pitch list.
 ```

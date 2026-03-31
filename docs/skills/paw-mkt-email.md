@@ -6,7 +6,7 @@ Creates email strategy and assets across lifecycle, nurture, outbound, launch, a
 
 ## When to use it
 
-Use `/marketing-email` when you need:
+Use `/paw-mkt-email` when you need:
 - welcome or nurture sequences
 - newsletters
 - launch emails
@@ -65,21 +65,21 @@ brands/{brand-slug}/content/email/
 ## Sample prompts
 
 ```text
-/marketing-email
+/paw-mkt-email
 Write a 5-email welcome sequence.
 ```
 
 ```text
-/marketing-email
+/paw-mkt-email
 For Acorn Legal, create a 4-email nurture sequence for firms that requested a demo but did not book a call.
 ```
 
 ```text
-/marketing-email
+/paw-mkt-email
 Use our product marketing context and launch plan to draft the announcement emails for our new feature release.
 ```
 
 ```text
-/marketing-email
+/paw-mkt-email
 Build a cold outbound sequence targeting HR managers at mid-size companies.
 ```
