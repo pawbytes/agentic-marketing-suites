@@ -33,8 +33,13 @@ You are a senior marketing strategist who does the hard research and thinking wo
 
 1. Load available config from `{project-root}/.pawbytes/marketing-suites/config/config.yaml` and `{project-root}/.pawbytes/marketing-suites/config/config.user.yaml` if present. Resolve and apply throughout the session.
 2. Read `./references/shared-patterns.md` for operating patterns.
-3. Check for existing brand workspace at `./.pawbytes/marketing-suites/brands/{brand-slug}/sostac/README.md` to determine resumption point.
-4. Greet the user appropriately and offer to show available capabilities.
+3. **Discover existing plans:**
+   - List available brands: `ls ./.pawbytes/marketing-suites/brands/`
+   - For each brand, check SOSTAC status: `cat ./.pawbytes/marketing-suites/brands/{brand-slug}/sostac/README.md`
+4. **Present options based on findings:**
+   - **Existing plan found:** Load `./references/capability-edit.md` and present the edit menu (Edit Phase / Continue / Review / View / Start Fresh)
+   - **No existing plan:** Offer to start new SOSTAC plan for selected or new brand
+5. Greet the user appropriately and offer to show available capabilities.
 
 ## Reference Lookup Protocol
 
@@ -51,6 +56,8 @@ General references (auto-discovery.md, best-practices.md) are read directly — 
 
 | Capability | Route |
 |------------|-------|
+| Plan Discovery | Load `./references/capability-edit.md` |
+| Edit Existing Plan | Load `./references/capability-edit.md` |
 | Auto-Discovery | Load `./references/capability-auto-discovery.md` |
 | Situation Analysis | Load `./references/capability-situation.md` |
 | Objectives Setting | Load `./references/capability-objectives.md` |

@@ -6,17 +6,45 @@ Route SOSTAC planning requests to the paw-mkt-sostac skill and handle coordinati
 ## Important
 **Do not attempt to run SOSTAC yourself.** Invoke the `paw-mkt-sostac` skill for all strategic planning.
 
+## Routing Scenarios
+
+### New Plan
+When user wants to create a new SOSTAC plan:
+1. Invoke **paw-mkt-sostac** skill
+2. The skill will guide through all 6 phases
+
+### Resume Existing Plan
+When user wants to continue an incomplete plan:
+1. Invoke **paw-mkt-sostac** skill
+2. The skill will detect incomplete phases and resume
+
+### Edit Existing Plan
+When user wants to revise a completed or partial plan:
+1. Invoke **paw-mkt-sostac** skill
+2. The skill will present the edit menu with options:
+   - ✏️ Edit a specific phase
+   - 🔄 Full Plan Review
+   - 📖 View Phase
+   - 🆕 Start Fresh
+
+User signals for edit mode:
+- "I need to update my SOSTAC plan"
+- "Revise the Strategy phase"
+- "Something changed, need to update our plan"
+- "Edit the Objectives"
+
 ## Before Invoking
 
 1. Confirm brand is loaded and `brand-context.md` has been read
 2. Check SOSTAC status (see `./sostac-status.md`) to know where to resume
-3. Tell user which phase comes next
+3. Tell user which phase comes next (or that plan is complete)
 
 ## HITL Review Gates
 
 The SOSTAC agent will pause for user review:
 - **After each phase** — User must approve before advancing to next phase
 - **After all 6 phases** — Final Plan Review Session with quality scorecard
+- **After editing a phase** — Cross-phase impact check and propagation options
 
 Do not auto-advance. Let the review gates work.
 
