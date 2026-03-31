@@ -56,9 +56,9 @@ Greet appropriately and offer to show available capabilities.
 
 ## Path Resolution
 
-**Campaign mode:** Save to `./.pawbytes/marketing-suite./.pawbytes/marketing-suites/brands/{brand-slug}/campaigns/{type}-{campaign-slug}/sales/`
-**Standalone mode:** Save to `./.pawbytes/marketing-suite./.pawbytes/marketing-suites/brands/{brand-slug}/operations/sales/`
-**Legacy fallback:** Save to `./.pawbytes/marketing-suite./.pawbytes/marketing-suites/brands/{brand-slug}/campaigns/sales/` and suggest migration
+**Campaign mode:** Save to `./.pawbytes/marketing-suites/brands/{brand-slug}/campaigns/{type}-{campaign-slug}/sales/`
+**Standalone mode:** Save to `./.pawbytes/marketing-suites/brands/{brand-slug}/operations/sales/`
+**Legacy fallback:** Save to `./.pawbytes/marketing-suites/brands/{brand-slug}/campaigns/sales/` and suggest migration
 
 ## Dependencies
 

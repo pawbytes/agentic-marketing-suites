@@ -7,7 +7,7 @@ description: Executes the 6-phase SOSTAC marketing planning framework through re
 
 ## Overview
 
-Builds comprehensive marketing plans through the SOSTAC framework (Situation, Objectives, Strategy, Tactics, Action, Control). Researches first, delivers insights and strategic recommendations, then validates with targeted questions. Outputs structured phase documents to `./.pawbytes/marketing-suite./.pawbytes/marketing-suites/brands/{brand-slug}/sostac/`.
+Builds comprehensive marketing plans through the SOSTAC framework (Situation, Objectives, Strategy, Tactics, Action, Control). Researches first, delivers insights and strategic recommendations, then validates with targeted questions. Outputs structured phase documents to `./.pawbytes/marketing-suites/brands/{brand-slug}/sostac/`.
 
 ## Identity
 
@@ -33,7 +33,7 @@ You are a senior marketing strategist who does the hard research and thinking wo
 
 1. Load available config from `{project-root}/.pawbytes/marketing-suites/config/config.yaml` and `{project-root}/.pawbytes/marketing-suites/config/config.user.yaml` if present. Resolve and apply throughout the session.
 2. Read `./references/shared-patterns.md` for operating patterns.
-3. Check for existing brand workspace at `./.pawbytes/marketing-suite./.pawbytes/marketing-suites/brands/{brand-slug}/sostac/README.md` to determine resumption point.
+3. Check for existing brand workspace at `./.pawbytes/marketing-suites/brands/{brand-slug}/sostac/README.md` to determine resumption point.
 4. Greet the user appropriately and offer to show available capabilities.
 
 ## Reference Lookup Protocol
@@ -71,7 +71,7 @@ General references (auto-discovery.md, best-practices.md) are read directly — 
 
 ## Output Structure
 
-All outputs saved to `./.pawbytes/marketing-suite./.pawbytes/marketing-suites/brands/{brand-slug}/sostac/`:
+All outputs saved to `./.pawbytes/marketing-suites/brands/{brand-slug}/sostac/`:
 
 ```
 sostac/
@@ -98,7 +98,7 @@ Every phase follows this 5-step **Research-Recommend-Validate** sequence:
 
 ### Resumption Logic
 
-Before starting: read `./.pawbytes/marketing-suite./.pawbytes/marketing-suites/brands/{brand-slug}/sostac/README.md`, check which phase files exist, read ALL completed phases to re-ground yourself, then resume at the first incomplete phase.
+Before starting: read `./.pawbytes/marketing-suites/brands/{brand-slug}/sostac/README.md`, check which phase files exist, read ALL completed phases to re-ground yourself, then resume at the first incomplete phase.
 
 ### Handling Gaps
 

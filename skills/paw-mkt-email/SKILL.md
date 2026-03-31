@@ -30,28 +30,25 @@ Greet the user appropriately and offer to show available capabilities.
 
 ## Path Resolution
 
-**Campaign mode**: `./.pawbytes/marketing-suite./.pawbytes/marketing-suites/brands/{brand-slug}/campaigns/{type}-{campaign-slug}/channels/email/content/`
-**Standalone mode**: `./.pawbytes/marketing-suite./.pawbytes/marketing-suites/brands/{brand-slug}/channels/email/content/`
-**Legacy fallback**: `./.pawbytes/marketing-suite./.pawbytes/marketing-suites/brands/{brand-slug}/content/email/` (suggest migration)
+**Campaign mode**: `./.pawbytes/marketing-suites/brands/{brand-slug}/campaigns/{type}-{campaign-slug}/channels/email/content/`
+**Standalone mode**: `./.pawbytes/marketing-suites/brands/{brand-slug}/channels/email/content/`
+**Legacy fallback**: `./.pawbytes/marketing-suites/brands/{brand-slug}/content/email/` (suggest migration)
 
 ## Capabilities
 
-| Capability | Route |
-|------------|-------|
-| Strategy Framework | Load `./references/strategy-framework.md` |
-| Sequence Design | Load `./references/frameworks-index.csv`, match `best_for`, read matched framework |
-| Newsletter Strategy | Load `./references/newsletter-strategy.md` |
-| Email Copywriting | Load `./references/email-copywriting.md` |
-| Automation Workflows | Load `./references/automation-workflows.md` |
-| List Management | Load `./references/list-management.md` |
-| Deliverability | Load `./references/best-practices.md` |
-| ESP Selection | Load `./references/esp-selection.md` |
-| A/B Testing | Load `./references/ab-testing.md` |
-| Analytics | Load `./references/benchmarks.md` |
-| Cold Email | Load `./references/cold-email.md` |
-| Modern Practices | Load `./references/modern-practices.md` |
-| Ethics | Load `./references/ethics.md` |
-| Output Contract | Load `./references/output-contract.md` |
+| Capability | Outcome |
+|------------|---------|
+| Strategy Framework | Defines email's role in marketing mix, list growth targets, segmentation approach, and KPI benchmarks |
+| Sequence Design | Maps nurture, onboarding, re-engagement, and post-purchase sequences with timing, triggers, and goals per email |
+| Newsletter Strategy | Designs editorial calendar, content mix, cadence, and growth tactics for owned newsletter channels |
+| Email Copywriting | Produces subject lines, preview text, body copy, and CTAs optimized for opens, clicks, and conversions |
+| Automation Workflows | Maps trigger-based flows: welcome, abandoned cart, post-purchase, win-back, and behavioral sequences |
+| List Management | Defines segmentation strategy, hygiene protocols, sunset policies, and compliance requirements |
+| Deliverability | Audits sender reputation, authentication (SPF/DKIM/DMARC), and provides technical compliance checklist |
+| ESP Selection | Recommends email service providers based on feature needs, volume, and integration requirements |
+| A/B Testing | Designs test plans for subject lines, send times, content, and CTAs with statistical significance guidance |
+| Analytics | Defines KPI dashboards, attribution models, and reporting cadence for email performance measurement |
+| Cold Email | Creates outbound sequences with personalization frameworks, follow-up cadences, and compliance guardrails |
 
 ## Starting Context Router
 

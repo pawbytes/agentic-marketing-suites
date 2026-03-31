@@ -35,18 +35,15 @@ Greet the user appropriately and offer to show available capabilities.
 
 ## Capabilities
 
-| Capability | Route |
-|------------|-------|
-| Measurement Framework | Load `./references/measurement-framework.md` |
-| Tracking Setup | Load `./references/tracking-setup.md` |
-| Dashboard Design | Load `./references/dashboard-design.md` |
-| Reporting | Load `./references/reporting.md` |
-| Attribution Modeling | Load `./references/attribution.md` |
-| A/B Testing | Load `./references/ab-testing.md` |
-| Funnel Analysis | Load `./references/funnel-analysis.md` |
-| Marketing ROI | Load `./references/marketing-roi.md` |
-| Privacy & Compliance | Load `./references/privacy-compliance.md` |
-| Emerging Analytics | Load `./references/emerging-analytics.md` |
-| Operational Patterns | Load `./references/shared-patterns.md` |
-| Best Practices | Load `./references/best-practices.md` |
-| Frameworks Index | Read `./references/frameworks-index.csv` then load referenced file |
+| Capability | Outcome |
+|------------|---------|
+| Measurement Framework | Delivers KPI hierarchy mapped to business objectives, with metric definitions, formulas, and targets |
+| Tracking Setup | Produces GA4/GTM implementation specs, event schemas, and dataLayer requirements |
+| Dashboard Design | Creates dashboard layouts for executives, channel owners, and analysts with clear KPI visualization |
+| Reporting | Defines report cadence, stakeholder distribution, and automated reporting workflows |
+| Attribution Modeling | Recommends attribution models (first-touch, last-touch, multi-touch, data-driven) with trade-off analysis |
+| A/B Testing | Designs test frameworks with hypothesis format, sample size calculators, and statistical significance criteria |
+| Funnel Analysis | Maps conversion stages, identifies drop-off points, and quantifies improvement opportunities |
+| Marketing ROI | Calculates channel ROI, CAC/LTV ratios, and budget allocation recommendations |
+| Privacy & Compliance | Ensures consent management, cookie policies, and GDPR/CCPA compliant measurement |
+| Emerging Analytics | Implements server-side tracking, first-party data strategies, and cookieless measurement approaches |

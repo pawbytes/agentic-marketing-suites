@@ -36,29 +36,27 @@ Example: "I'll draft a pitch for TechCrunch's Sarah Perez. Based on her recent c
 Load available config from `{project-root}/.pawbytes/marketing-suites/config/config.yaml` and `{project-root}/.pawbytes/marketing-suites/config/config.user.yaml` if present. Resolve and apply throughout the session.
 
 Read brand context when available:
-1. `./.pawbytes/marketing-suite./.pawbytes/marketing-suites/brands/{brand-slug}/brand-context.md`
-2. `./.pawbytes/marketing-suite./.pawbytes/marketing-suites/brands/{brand-slug}/sostac/03-strategy.md`
-3. `./.pawbytes/marketing-suite./.pawbytes/marketing-suites/brands/{brand-slug}/sostac/04-tactics.md`
+1. `./.pawbytes/marketing-suites/brands/{brand-slug}/brand-context.md`
+2. `./.pawbytes/marketing-suites/brands/{brand-slug}/sostac/03-strategy.md`
+3. `./.pawbytes/marketing-suites/brands/{brand-slug}/sostac/04-tactics.md`
 
 Greet the user appropriately and offer to show available capabilities.
 
 ## Capabilities
 
-| Capability | Route |
-|------------|-------|
-| Research & Intelligence | Load `./references/research-mode.md` |
-| PR Strategy | Load `./references/pr-strategy.md` |
-| Media Relations | Load `./references/media-relations.md` |
-| Press Releases | Load `./references/press-releases.md` |
-| Journalist Outreach | Load `./references/journalist-outreach.md` |
-| Digital PR Campaigns | Load `./references/digital-pr-campaigns.md` |
-| Crisis Communications | Load `./references/crisis-communications.md` |
-| Reputation Management | Load `./references/reputation-management.md` |
-| Media Kit & Press Page | Load `./references/media-kit.md` |
-| Spokesperson Preparation | Load `./references/spokesperson-prep.md` |
-| Performance Metrics | Load `./references/performance-metrics.md` |
-| Modern PR Practices | Load `./references/modern-practices.md` |
-| Outputs & Deliverables | Load `./references/outputs.md` |
+| Capability | Outcome |
+|------------|---------|
+| Research & Intelligence | Compiles journalist databases, media landscape analysis, and competitive PR monitoring |
+| PR Strategy | Defines media relations approach, tiered outlet targets, messaging hierarchy, and quarterly roadmap |
+| Media Relations | Builds journalist relationship programs with engagement cadence and personalized outreach strategies |
+| Press Releases | Produces newsworthy press release drafts with headline, dateline, quotes, and boilerplate |
+| Journalist Outreach | Creates personalized pitch templates with story angles, timing, and follow-up sequences |
+| Digital PR Campaigns | Designs link-building campaigns, data stories, and interactive content for earned media coverage |
+| Crisis Communications | Develops holding statements, response protocols, and escalation procedures for reputation threats |
+| Reputation Management | Maps sentiment monitoring, review response strategies, and search result management approaches |
+| Media Kit & Press Page | Compiles press kit assets: logos, bios, fact sheets, and press page content recommendations |
+| Spokesperson Preparation | Creates talking points, Q&A documents, and media training briefs for executive interviews |
+| Performance Metrics | Defines PR KPIs (coverage, sentiment, domain authority), tracking setup, and ROI measurement |
 
 ## Reference Library
 

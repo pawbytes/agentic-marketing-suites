@@ -33,18 +33,15 @@ Greet the user appropriately and offer to show available capabilities.
 
 ## Capabilities
 
-| Capability | Route |
-|------------|-------|
-| Platform Strategy | Load `./references/platform-strategy.md` |
-| Content Strategy | Load `./references/content-strategy.md` |
-| Social Commerce | Load `./references/social-commerce.md` |
-| Community Management | Load `./references/community-management.md` |
-| Growth Tactics | Load `./references/growth-tactics.md` |
-| Analytics | Load `./references/analytics.md` |
-| Deliverables | Load `./references/deliverables.md` |
-| Best Practices Index | Load `./references/best-practices.md` |
-| Benchmarks Data | Load `./references/benchmarks.md` |
-| Calendar Templates | Load `./references/content-calendar.md` |
+| Capability | Outcome |
+|------------|---------|
+| Platform Strategy | Recommends platform mix based on audience presence, delivers native content playbooks per platform |
+| Content Strategy | Defines pillar mix, posting cadence, format priorities, and content-to-conversion pathways |
+| Social Commerce | Designs shoppable content, product tagging strategy, and in-app purchase funnels |
+| Community Management | Creates engagement protocols, response templates, escalation procedures, and voice guidelines |
+| Growth Tactics | Delivers follower acquisition strategies: collaboration plays, hashtag systems, and cross-promotion |
+| Analytics | Maps platform KPIs to business metrics, defines reporting cadence and benchmark targets |
+| Deliverables | Produces content calendars, caption templates, hashtag sets, and platform-native asset specs |
 
 ## Reference Lookup Protocol
 
@@ -57,22 +54,7 @@ This skill uses progressive disclosure to save tokens:
 
 `shared-patterns.md` is read directly -- not indexed.
 
-## Starting Context Router
-
-Apply the mode that matches the user's starting point (see `./references/shared-patterns.md`):
-- **Blank page**: Read brand/SOSTAC context first
-- **Existing codebase**: Research codebase before proposing changes
-- **Live URL**: Audit the live experience as working truth
-
-## Pre-Flight
-
-Read strategic context before specialist work (see `./references/shared-patterns.md`):
-1. `./.pawbytes/marketing-suite./.pawbytes/marketing-suites/brands/{brand-slug}/brand-context.md`
-2. `./.pawbytes/marketing-suite./.pawbytes/marketing-suites/brands/{brand-slug}/paw-mkt-product-context.md`
-3. `./.pawbytes/marketing-suite./.pawbytes/marketing-suites/brands/{brand-slug}/sostac/03-strategy.md`
-4. `./.pawbytes/marketing-suite./.pawbytes/marketing-suites/brands/{brand-slug}/sostac/04-tactics.md`
-
-If brand files are missing but a codebase or live URL is available, continue with that as the working source of truth.
+See `./references/shared-patterns.md` for Starting Context Router and Pre-Flight protocols.
 
 ## Response Protocol
 

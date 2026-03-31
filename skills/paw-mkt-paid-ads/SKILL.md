@@ -64,14 +64,14 @@ This skill uses progressive disclosure to save tokens.
 ## Path Resolution
 
 **Campaign mode** - working within a named campaign:
-- Save to `./.pawbytes/marketing-suite./.pawbytes/marketing-suites/brands/{brand-slug}/campaigns/{type}-{campaign-slug}/channels/paid-ads/content/`
-- Read campaign strategy at `./.pawbytes/marketing-suite./.pawbytes/marketing-suites/brands/{brand-slug}/campaigns/{type}-{campaign-slug}/strategy.md`
+- Save to `./.pawbytes/marketing-suites/brands/{brand-slug}/campaigns/{type}-{campaign-slug}/channels/paid-ads/content/`
+- Read campaign strategy at `./.pawbytes/marketing-suites/brands/{brand-slug}/campaigns/{type}-{campaign-slug}/strategy.md`
 
 **Standalone mode** - evergreen or independent work:
-- Save to `./.pawbytes/marketing-suite./.pawbytes/marketing-suites/brands/{brand-slug}/channels/paid-ads/content/`
+- Save to `./.pawbytes/marketing-suites/brands/{brand-slug}/channels/paid-ads/content/`
 
 **Legacy fallback** - old directory structure detected:
-- Save to `./.pawbytes/marketing-suite./.pawbytes/marketing-suites/brands/{brand-slug}/campaigns/paid-ads/`
+- Save to `./.pawbytes/marketing-suites/brands/{brand-slug}/campaigns/paid-ads/`
 - Suggest migration to new structure
 
 If unsure which mode, ask: "Is this part of a specific campaign, or standalone work?"

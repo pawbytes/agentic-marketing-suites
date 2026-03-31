@@ -35,35 +35,19 @@ Read `./references/shared-patterns.md` for starting context router and pre-fligh
 
 ## Capabilities
 
-| Capability | Route |
-|------------|-------|
-| Cognitive Biases | Load `./references/frameworks/expanded-cognitive-biases.md` |
-| Cialdini Six Principles | Load `./references/frameworks/cialdini-six-principles.md` |
-| Pricing Psychology | Load `./references/pricing-psychology.md` |
-| Behavioral Design (BJ Fogg) | Load `./references/behavioral-design.md` |
-| Copy Frameworks | Load `./references/copy-frameworks.md` |
-| Psychology by Context | Load `./references/frameworks/psychology-by-context.md` |
-| Ethics & Dark Patterns | Load `./references/ethics.md` |
-| Diagnostic & Protocol | Load `./references/diagnostic-and-protocol.md` |
-| Quick Reference Table | Load `./references/frameworks/quick-reference-table.md` |
-| Strategic Mental Models | Load `./references/frameworks/strategic-mental-models.md` |
+| Capability | Outcome |
+|------------|---------|
+| Cognitive Biases | Applies 50+ cognitive biases (loss aversion, anchoring, social proof, etc.) to optimize conversion copy and UX |
+| Cialdini Six Principles | Leverages reciprocity, commitment, social proof, authority, liking, and scarcity for ethical persuasion |
+| Pricing Psychology | Designs tier display, anchoring, decoy pricing, and price communication for perceived value optimization |
+| Behavioral Design (BJ Fogg) | Maps motivation/ability/triggers to design habit-forming products and reduce friction in user journeys |
+| Copy Frameworks | Rewrites headlines, CTAs, and value propositions using proven psychological frameworks with before/after examples |
+| Psychology by Context | Tailors persuasion tactics by channel: landing pages, emails, popups, checkout, and onboarding |
+| Ethics & Dark Patterns | Flags manipulative patterns and provides ethical alternatives that preserve trust and LTV |
+| Diagnostic & Protocol | Diagnoses conversion barriers through behavioral lens and delivers prioritized intervention roadmap |
 
 ## Reference Lookup Protocol
 
 This skill uses progressive disclosure. Start with `./references/frameworks-index.csv` to match the user's situation, then read only the matched framework file(s). Never bulk-read all framework files.
 
-## Starting Context
-
-Apply the Starting Context Router from `./references/shared-patterns.md`. Choose mode based on user's starting point:
-- Blank page/strategy → read brand context first
-- Existing codebase → research before proposing changes
-- Live URL → audit the live experience first
-
-## Pre-Flight
-
-Before specialist work, read brand files when available:
-1. `./.pawbytes/marketing-suite./.pawbytes/marketing-suites/brands/{brand-slug}/brand-context.md`
-2. `./.pawbytes/marketing-suite./.pawbytes/marketing-suites/brands/{brand-slug}/paw-mkt-product-context.md`
-3. `./.pawbytes/marketing-suite./.pawbytes/marketing-suites/brands/{brand-slug}/sostac/03-strategy.md` and `04-tactics.md`
-
-Continue with available context — do not block progress if brand files are missing.
+See `./references/shared-patterns.md` for Starting Context Router and Pre-Flight protocols.

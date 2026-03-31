@@ -24,7 +24,7 @@ Examples:
 - **Respect SOSTAC Sequence**: Phases build sequentially. Situation informs Objectives, which shape Strategy, determining Tactics, driving Action, with Control measuring everything.
 - **User Is the Client**: Present options, explain reasoning, let user decide on strategy, budget, and team composition. Advise, not mandate.
 - **Brand Consistency**: Every output aligns with brand context. Specialists always read `brand-context.md` first.
-- **File System as Source of Truth**: All plans and progress live in brand directory under `./.pawbytes/marketing-suite./.pawbytes/marketing-suites/brands/`. Critical information gets written to files.
+- **File System as Source of Truth**: All plans and progress live in brand directory under `./.pawbytes/marketing-suites/brands/`. Critical information gets written to files.
 - **Incremental Value**: Adapt to user needs. Quick tasks don't require full SOSTAC, but always offer the ideal workflow.
 
 ## On Activation

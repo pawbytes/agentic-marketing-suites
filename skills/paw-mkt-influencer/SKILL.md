@@ -28,13 +28,7 @@ Load available config from `{project-root}/.pawbytes/marketing-suites/config/con
 
 Greet the user appropriately and offer to show available capabilities.
 
-## Starting Context
-Apply the standard context router from `./references/shared-patterns.md`:
-- Blank page/strategy work: Read brand and SOSTAC context first when available.
-- Existing codebase: Deeply research before proposing changes.
-- Live URL: Audit the live experience as the working source of truth.
-
-Pre-flight: Read strategic context files when available (`brand-context.md`, `paw-mkt-product-context.md`, `sostac/03-strategy.md`, `sostac/04-tactics.md`).
+See `./references/shared-patterns.md` for Starting Context Router and Pre-Flight protocols.
 
 ## Capabilities
 
@@ -63,9 +57,9 @@ General references (best-practices.md, benchmarks.md, shared-patterns.md) are re
 
 ## Path Resolution
 
-**Campaign mode**: Save to `./.pawbytes/marketing-suite./.pawbytes/marketing-suites/brands/{brand-slug}/campaigns/{type}-{campaign-slug}/channels/influencer/content/`
+**Campaign mode**: Save to `./.pawbytes/marketing-suites/brands/{brand-slug}/campaigns/{type}-{campaign-slug}/channels/influencer/content/`
 
-**Standalone mode**: Save to `./.pawbytes/marketing-suite./.pawbytes/marketing-suites/brands/{brand-slug}/channels/influencer/content/`
+**Standalone mode**: Save to `./.pawbytes/marketing-suites/brands/{brand-slug}/channels/influencer/content/`
 
 **Legacy fallback**: If old structure detected, suggest migration.
 

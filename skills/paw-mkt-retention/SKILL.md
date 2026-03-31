@@ -45,11 +45,11 @@ Greet the user appropriately and offer to show available capabilities.
 
 ## Path Resolution
 
-**Campaign mode** (named campaign): Save to `./.pawbytes/marketing-suite./.pawbytes/marketing-suites/brands/{brand-slug}/campaigns/{type}-{campaign-slug}/retention/`
+**Campaign mode** (named campaign): Save to `./.pawbytes/marketing-suites/brands/{brand-slug}/campaigns/{type}-{campaign-slug}/retention/`
 
-**Standalone mode** (evergreen/independent): Save to `./.pawbytes/marketing-suite./.pawbytes/marketing-suites/brands/{brand-slug}/operations/retention/`
+**Standalone mode** (evergreen/independent): Save to `./.pawbytes/marketing-suites/brands/{brand-slug}/operations/retention/`
 
-**Legacy fallback** (old structure): Save to `./.pawbytes/marketing-suite./.pawbytes/marketing-suites/brands/{brand-slug}/campaigns/retention/` and suggest migration.
+**Legacy fallback** (old structure): Save to `./.pawbytes/marketing-suites/brands/{brand-slug}/campaigns/retention/` and suggest migration.
 
 If unsure, ask: "Is this part of a specific campaign, or standalone work?"
 

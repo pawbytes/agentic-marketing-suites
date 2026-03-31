@@ -44,36 +44,33 @@ Before any content work, read strategic context per `./references/shared-pattern
 ## Path Resolution
 
 **Campaign mode** (named campaign):
-- Blog content: `./.pawbytes/marketing-suite./.pawbytes/marketing-suites/brands/{brand-slug}/campaigns/{type}-{campaign-slug}/channels/blog/content/`
-- Meta content: `./.pawbytes/marketing-suite./.pawbytes/marketing-suites/brands/{brand-slug}/campaigns/{type}-{campaign-slug}/channels/content/content/`
+- Blog content: `./.pawbytes/marketing-suites/brands/{brand-slug}/campaigns/{type}-{campaign-slug}/channels/blog/content/`
+- Meta content: `./.pawbytes/marketing-suites/brands/{brand-slug}/campaigns/{type}-{campaign-slug}/channels/content/content/`
 
 **Standalone mode** (evergreen/independent):
-- Blog content: `./.pawbytes/marketing-suite./.pawbytes/marketing-suites/brands/{brand-slug}/channels/blog/content/`
-- Meta content: `./.pawbytes/marketing-suite./.pawbytes/marketing-suites/brands/{brand-slug}/channels/content/content/`
+- Blog content: `./.pawbytes/marketing-suites/brands/{brand-slug}/channels/blog/content/`
+- Meta content: `./.pawbytes/marketing-suites/brands/{brand-slug}/channels/content/content/`
 
-**Legacy fallback**: Save to `./.pawbytes/marketing-suite./.pawbytes/marketing-suites/brands/{brand-slug}/content/` and suggest migration.
+**Legacy fallback**: Save to `./.pawbytes/marketing-suites/brands/{brand-slug}/content/` and suggest migration.
 
 If unsure which mode, ask: "Is this part of a specific campaign, or standalone work?"
 
 ## Capabilities
 
-| Capability | Route |
-|------------|-------|
-| Content Strategy | Load `./references/content-strategy.md` |
-| Content Research | Load `./references/content-research.md` |
-| Editorial Calendar | Load `./references/frameworks/editorial-calendar.md` |
-| Blog Writing | Load `./references/blog-writing.md` |
-| Lead Magnets | Load `./references/lead-magnets.md` |
-| Case Studies | Load `./references/frameworks/case-study-framework.md` |
-| Conversion Copywriting | Load `./references/frameworks/conversion-copywriting.md` |
-| Thought Leadership | Load `./references/thought-leadership.md` |
-| Content Distribution | Load `./references/content-distribution.md` |
-| Content Repurposing | Load `./references/frameworks/content-repurposing.md` |
-| Content Performance | Load `./references/content-performance.md` |
-| Modern Practices (AI/GEO) | Load `./references/modern-practices.md` |
-| Benchmarks | Load `./references/benchmarks.md` |
-| Best Practices | Load `./references/best-practices.md` |
-| Framework Selection | Load `./references/frameworks/framework-selection-guide.md` |
+| Capability | Outcome |
+|------------|---------|
+| Content Strategy | Defines 3-5 content pillars, voice/tone guide, funnel mapping, and editorial themes aligned to brand positioning |
+| Content Research | Identifies topic opportunities, keyword gaps, competitor content analysis, and audience questions to answer |
+| Editorial Calendar | Delivers 90-day content calendar with posts mapped to funnel stages, publication dates, and ownership |
+| Blog Writing | Produces SEO-optimized, publication-ready blog posts with target keyword, meta description, and CTA |
+| Lead Magnets | Designs ebook, checklist, or template concepts with outline, value proposition, and conversion path |
+| Case Studies | Structures customer success stories with challenge/solution/results format and quotable proof points |
+| Conversion Copywriting | Rewrites landing pages and emails with benefit-led, action-oriented copy grounded in audience psychology |
+| Thought Leadership | Develops opinion pieces, trend commentary, and expert positioning content for executive bylines |
+| Content Distribution | Creates distribution plan across owned, earned, and paid channels with repurposing roadmap |
+| Content Repurposing | Transforms pillar content into derivatives: social posts, email snippets, video scripts, infographics |
+| Content Performance | Defines KPIs, tracking setup, and reporting cadence for measuring content ROI |
+| Modern Practices (AI/GEO) | Adapts content for AI search optimization, featured snippets, and LLM citation potential |
 
 ## Response Protocol
 

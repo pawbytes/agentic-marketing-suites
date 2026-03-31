@@ -61,15 +61,15 @@ This skill uses progressive disclosure to save tokens.
 
 ## Capabilities
 
-| Capability | Route |
-|------------|-------|
-| Brand Selection | Load `./references/brand-selection.md` |
-| Check Existing Context | Load `./references/check-existing.md` |
-| Auto-Extract from SOSTAC | Load `./references/auto-extract.md` |
-| Focused Interview | Load `./references/focused-interview.md` |
-| Document Operations | Load `./references/document-operations.md` |
-| Staleness Detection | Load `./references/staleness-detection.md` |
-| Document Template | Load `./references/document-template.md` |
+| Capability | Outcome |
+|------------|---------|
+| Brand Selection | Identifies which brand workspace to work with, handles multi-brand projects and new brand creation |
+| Check Existing Context | Locates and reads existing paw-mkt-product-context.md, assesses completeness and staleness |
+| Auto-Extract from SOSTAC | Pulls positioning intelligence from SOSTAC files without re-asking answered questions |
+| Focused Interview | Conducts targeted interviews to surface verbatim customer language, objections, and proof points |
+| Document Operations | Creates, updates, and syncs the 12-section positioning document with brand-context.md |
+| Staleness Detection | Flags outdated sections and recommends refresh schedule based on market changes |
+| Document Template | Provides the 12-section structure with field definitions and completion criteria |
 
 ## Output Contract
 

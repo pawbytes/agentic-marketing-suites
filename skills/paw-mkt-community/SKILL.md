@@ -38,16 +38,16 @@ Greet the user and offer to show available capabilities.
 | Existing Codebase / Implementation | Research existing community assets, platform setup, and engagement patterns before proposing changes |
 | Live Community URL | Audit the live community first, use visible structure as working source of truth |
 
-Read brand files when available: `./.pawbytes/marketing-suite./.pawbytes/marketing-suites/brands/{brand-slug}/brand-context.md`, `./.pawbytes/marketing-suite./.pawbytes/marketing-suites/brands/{brand-slug}/sostac/03-strategy.md`, `./.pawbytes/marketing-suite./.pawbytes/marketing-suites/brands/{brand-slug}/sostac/04-tactics.md`.
+Read brand files when available: `./.pawbytes/marketing-suites/brands/{brand-slug}/brand-context.md`, `./.pawbytes/marketing-suites/brands/{brand-slug}/sostac/03-strategy.md`, `./.pawbytes/marketing-suites/brands/{brand-slug}/sostac/04-tactics.md`.
 
 ## Path Resolution
 
 **Campaign mode** — working within a named campaign:
-- Save to `./.pawbytes/marketing-suite./.pawbytes/marketing-suites/brands/{brand-slug}/campaigns/{type}-{campaign-slug}/community/`
-- Read campaign strategy at `./.pawbytes/marketing-suite./.pawbytes/marketing-suites/brands/{brand-slug}/campaigns/{type}-{campaign-slug}/strategy.md`
+- Save to `./.pawbytes/marketing-suites/brands/{brand-slug}/campaigns/{type}-{campaign-slug}/community/`
+- Read campaign strategy at `./.pawbytes/marketing-suites/brands/{brand-slug}/campaigns/{type}-{campaign-slug}/strategy.md`
 
 **Standalone mode** — evergreen or independent work:
-- Save to `./.pawbytes/marketing-suite./.pawbytes/marketing-suites/brands/{brand-slug}/operations/community/`
+- Save to `./.pawbytes/marketing-suites/brands/{brand-slug}/operations/community/`
 
 If unsure, ask: "Is this part of a specific campaign, or standalone work?"
 

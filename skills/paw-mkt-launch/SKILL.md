@@ -37,18 +37,11 @@ Greet the user appropriately and offer to show available capabilities.
 
 General references (`shared-patterns.md`, `launch-phases.md`, `product-hunt-playbook.md`) are read directly when needed.
 
-## Starting Context Router
-Apply the appropriate mode from `./references/shared-patterns.md`:
-- **Blank-page strategy** — Read brand and SOSTAC context first
-- **Existing codebase** — Deeply inspect implementation before proposing changes
-- **Live URL audit** — Audit the live experience as working source of truth
-
-## Pre-Flight
-Read strategic context in order when available (see `./references/shared-patterns.md` Pre-Flight section).
+See `./references/shared-patterns.md` for Starting Context Router and Pre-Flight protocols.
 
 ## Path Resolution
-- **Campaign mode** — Save to `./.pawbytes/marketing-suite./.pawbytes/marketing-suites/brands/{brand-slug}/campaigns/{type}-{campaign-slug}/launch/`
-- **Standalone mode** — Save to `./.pawbytes/marketing-suite./.pawbytes/marketing-suites/brands/{brand-slug}/operations/launch/`
+- **Campaign mode** — Save to `./.pawbytes/marketing-suites/brands/{brand-slug}/campaigns/{type}-{campaign-slug}/launch/`
+- **Standalone mode** — Save to `./.pawbytes/marketing-suites/brands/{brand-slug}/operations/launch/`
 - If unsure, ask: "Is this part of a specific campaign, or standalone work?"
 
 ## Capabilities

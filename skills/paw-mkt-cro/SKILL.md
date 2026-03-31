@@ -50,13 +50,12 @@ Greet the user appropriately and offer to show available capabilities.
 
 ## Capabilities
 
-| Capability | Route |
-|------------|-------|
-| Landing Page CRO | Load `./references/page-cro.md` |
-| Signup Flow CRO | Load `./references/signup-cro.md` |
-| Onboarding CRO | Load `./references/onboarding-cro.md` |
-| Form CRO | Load `./references/form-cro.md` |
-| Popup and Modal CRO | Load `./references/popup-cro.md` |
-| Paywall and Upgrade CRO | Load `./references/paywall-cro.md` |
-| CRO Workflow | Load `./references/workflow.md` |
-| Shared Patterns | Load `./references/shared-patterns.md` |
+| Capability | Outcome |
+|------------|---------|
+| Landing Page CRO | Audits above-the-fold clarity, headline effectiveness, CTA hierarchy, and delivers prioritized Quick Wins and test hypotheses |
+| Signup Flow CRO | Analyzes multi-step registration flows, reduces friction, improves field ordering, and increases completion rates |
+| Onboarding CRO | Optimizes first-run experience, activation metrics, time-to-value, and feature adoption sequences |
+| Form CRO | Reduces field friction, optimizes layout and microcopy, increases completion rates with specific field-by-field recommendations |
+| Popup and Modal CRO | Designs exit-intent and engagement triggers, offer timing, copy, and targeting rules for list growth |
+| Paywall and Upgrade CRO | Structures upgrade prompts, pricing display, value communication, and trial-to-paid conversion flows |
+| CRO Workflow | Delivers complete audit methodology, prioritization framework, and test roadmap with sample size guidance |

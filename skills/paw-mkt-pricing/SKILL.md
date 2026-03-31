@@ -49,10 +49,10 @@ This skill uses progressive disclosure. Read `./references/frameworks-index.csv`
 ## Path Resolution
 
 **Campaign mode** — working within a named campaign:
-→ Save to `./.pawbytes/marketing-suite./.pawbytes/marketing-suites/brands/{brand-slug}/campaigns/{type}-{campaign-slug}/pricing/`
+→ Save to `./.pawbytes/marketing-suites/brands/{brand-slug}/campaigns/{type}-{campaign-slug}/pricing/`
 
 **Standalone mode** — evergreen or independent work:
-→ Save to `./.pawbytes/marketing-suite./.pawbytes/marketing-suites/brands/{brand-slug}/operations/pricing/`
+→ Save to `./.pawbytes/marketing-suites/brands/{brand-slug}/operations/pricing/`
 
 If unsure which mode, ask: "Is this part of a specific campaign, or standalone work?"
 
@@ -63,7 +63,7 @@ Use `agent-browser` for live competitive pricing intelligence. Start a named ses
 ```bash
 # Capture competitor pricing page
 agent-browser --session pricing-research open "https://{competitor-domain}/pricing"
-agent-browser screenshot ./.pawbytes/marketing-suite./.pawbytes/marketing-suites/brands/{brand-slug}/operations/pricing/competitor-{n}-pricing-page.png
+agent-browser screenshot ./.pawbytes/marketing-suites/brands/{brand-slug}/operations/pricing/competitor-{n}-pricing-page.png
 agent-browser get text body
 ```
 
