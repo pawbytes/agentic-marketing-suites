@@ -64,7 +64,7 @@ Ask the user for values. Show defaults in brackets. Present all values together 
 
 **Default priority** (highest wins): existing new config values > migrated legacy values > `./assets/module.yaml` defaults.
 
-**Core config** (only if no core keys exist yet): `user_name` (default: BMad), `communication_language` and `document_output_language` (default: English — ask as a single language question, both keys get the same answer). Of these, `user_name` and `communication_language` are written exclusively to `config.user.yaml`.
+**Core config** (only if no core keys exist yet): `user_name` (default: Pawbytes), `communication_language` and `document_output_language` (default: English — ask as a single language question, both keys get the same answer). Of these, `user_name` and `communication_language` are written exclusively to `config.user.yaml`.
 
 **Module config**: Read each variable in `./assets/module.yaml` that has a `prompt` field. Ask using that prompt with its default value.
 
