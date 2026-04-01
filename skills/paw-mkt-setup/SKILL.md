@@ -108,7 +108,7 @@ python3 ./scripts/merge-config.py \
 python3 ./scripts/merge-help-csv.py \
   --target "{project-root}/.pawbytes/config/module-help.csv" \
   --source ./assets/module-help.csv \
-  --module-code ams
+  --module-code mkt
 ```
 
 Both scripts output JSON to stdout with results. If either exits non-zero, surface the error and stop.

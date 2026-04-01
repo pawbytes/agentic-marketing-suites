@@ -1,7 +1,7 @@
-code: ams
+code: mkt
 name: Agentic Marketing Suite
 description: 21 specialized AI marketing agents covering strategy, content, SEO, paid ads, social, email, CRO, PR, pricing, retention, and more — orchestrated through SOSTAC-based planning.
-module_version: 0.3.6
+module_version: 0.3.7
 default_selected: false
 module_greeting: |
   🎯 **Agentic Marketing Suite activated.** You now have 21 specialized marketing agents at your disposal.
