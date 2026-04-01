@@ -77,6 +77,7 @@ General references (auto-discovery.md, best-practices.md) are read directly — 
 | `./references/auto-discovery.md` | Browser automation commands for research |
 | `./references/shared-patterns.md` | Shared patterns across marketing skills |
 | `./references/quality-scorecard.md` | Final plan review quality criteria |
+| `./references/workflow.md` | Formal phase sequence, gates, and resumption protocol |
 
 ## Output Structure
 

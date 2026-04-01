@@ -47,3 +47,29 @@ Greet the user appropriately and offer to show available capabilities.
 | Marketing ROI | Calculates channel ROI, CAC/LTV ratios, and budget allocation recommendations |
 | Privacy & Compliance | Ensures consent management, cookie policies, and GDPR/CCPA compliant measurement |
 | Emerging Analytics | Implements server-side tracking, first-party data strategies, and cookieless measurement approaches |
+| Workflow | Follows phased workflow defined in `./references/workflow.md` for structured, sequential execution |
+
+## Response Protocol
+
+When the user requests analytics or measurement work:
+
+1. **Route the starting context** — Read `./references/shared-patterns.md` for Starting Context Router. Decide: strategy (measurement plan from scratch), codebase implementation (tracking setup), or live URL audit (existing analytics review).
+2. **Read strategic context** — Pre-Flight: brand and SOSTAC first when available; otherwise use existing analytics setup or live data as working source of truth.
+3. **Load the workflow** — Read `./references/workflow.md` and identify the appropriate workflow phase based on the user's request.
+4. **Gather diagnostic information** — Ask the diagnostic questions from the workflow if the user has not already provided this context (current tracking setup, business objectives, data maturity level).
+5. **Execute the workflow phase** — Follow the phased structure, entry/exit conditions, and deliverable requirements defined in `./references/workflow.md`.
+6. **Deliver structured output** — Produce deliverables matching the workflow's output specifications (measurement plans, tracking specs, dashboard designs, or attribution models).
+7. **Save deliverables** — Write to the resolved path (see Path Resolution).
+8. **Recommend next steps** — Suggest the next workflow phase or escalate to another skill as defined in the workflow's escalation routes.
+
+## Output Contract
+
+Every analytics deliverable includes:
+
+- **Measurement type**: framework, tracking spec, dashboard design, or report
+- **Business objective served**: which SOSTAC objective this measurement supports
+- **KPIs defined**: specific metrics with formulas, targets, and action thresholds
+- **Data sources required**: platforms, tools, and integrations needed
+- **Stakeholder audience**: who receives and acts on this output
+- **Reporting cadence**: frequency of review and distribution
+- **File saved to**: resolved path where the deliverable was written

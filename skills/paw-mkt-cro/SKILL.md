@@ -59,3 +59,28 @@ Greet the user appropriately and offer to show available capabilities.
 | Popup and Modal CRO | Designs exit-intent and engagement triggers, offer timing, copy, and targeting rules for list growth |
 | Paywall and Upgrade CRO | Structures upgrade prompts, pricing display, value communication, and trial-to-paid conversion flows |
 | CRO Workflow | Delivers complete audit methodology, prioritization framework, and test roadmap with sample size guidance |
+| Workflow Reference | Follows phased workflow defined in `./references/workflow.md` for structured, sequential execution |
+
+## Response Protocol
+
+When the user requests CRO or conversion optimization work:
+
+1. **Route the starting context** — Read `./references/shared-patterns.md` for Starting Context Router. Decide: strategy (conversion audit from scratch), codebase implementation (flow optimization), or live URL audit (page-level CRO review via agent-browser).
+2. **Read strategic context** — Pre-Flight: brand and SOSTAC first when available; otherwise use existing funnel data or live page as working source of truth.
+3. **Load the workflow** — Read `./references/workflow.md` and identify the appropriate workflow phase. The workflow contains a detailed response protocol with priority frameworks and diagnostic procedures — follow it as the primary execution guide.
+4. **Gather diagnostic information** — Ask for funnel data, current conversion rates, and traffic sources before recommending changes. Evidence over assumptions.
+5. **Execute the workflow phase** — Follow the phased structure, priority framework (value proposition before tactics), and deliverable requirements defined in `./references/workflow.md`.
+6. **Deliver structured output** — Produce deliverables categorized as Quick Wins, High-Impact Changes, and Test Hypotheses with sample size guidance.
+7. **Save deliverables** — Write to the resolved path (see Path Resolution).
+8. **Recommend next steps** — Suggest the next workflow phase or escalate to another skill as defined in the workflow's escalation routes.
+
+## Output Contract
+
+Every CRO deliverable includes:
+
+- **CRO type**: audit, test brief, or optimization roadmap
+- **Page or flow audited**: specific URL, page type, or user flow analyzed
+- **Current CVR**: baseline conversion rate if known, or noted as unknown
+- **Priority framework assessment**: value proposition, clarity, friction, and distraction ratings
+- **Recommendations breakdown**: count of quick wins, high-impact changes, and test hypotheses
+- **File saved to**: resolved path where the deliverable was written

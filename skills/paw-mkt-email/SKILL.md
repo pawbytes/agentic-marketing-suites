@@ -49,6 +49,7 @@ Greet the user appropriately and offer to show available capabilities.
 | A/B Testing | Designs test plans for subject lines, send times, content, and CTAs with statistical significance guidance |
 | Analytics | Defines KPI dashboards, attribution models, and reporting cadence for email performance measurement |
 | Cold Email | Creates outbound sequences with personalization frameworks, follow-up cadences, and compliance guardrails |
+| Workflow | Follows phased workflow defined in `./references/workflow.md` for structured, sequential execution |
 
 ## Starting Context Router
 
@@ -77,3 +78,14 @@ Read strategic context from `./references/shared-patterns.md` before any email w
 | Win-back showing product exits | paw-mkt-retention |
 | Lead magnet conversion declining | paw-mkt-cro |
 | High intent segment not converting | paw-mkt-sales |
+
+## Output Contract
+
+Every email deliverable includes:
+
+- **Email type**: sequence, newsletter, automation workflow, or cold outreach
+- **Journey stage**: where in the customer lifecycle this email operates
+- **Trigger event**: what initiates the email or sequence
+- **Number of emails**: count of emails in the sequence or flow
+- **Success metrics**: open rate, click rate, and conversion targets
+- **File saved to**: resolved path where the deliverable was written

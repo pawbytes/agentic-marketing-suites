@@ -42,6 +42,20 @@ Greet the user appropriately and offer to show available capabilities.
 | Research Mode | Load `./references/research-playbook.md` |
 | Shared Patterns | Load `./references/shared-patterns.md` |
 | Cancel Flow Templates | Load `./references/cancel-flow-templates.md` |
+| Workflow | Load `./references/workflow.md` |
+
+## Response Protocol
+
+When the user requests retention or churn prevention work:
+
+1. **Route the starting context** — Read `./references/shared-patterns.md` for Starting Context Router. Decide: strategy (retention program design), codebase implementation (cancel flow build), or live URL audit (existing flow review).
+2. **Read strategic context** — Pre-Flight: brand and SOSTAC first when available; otherwise use existing churn data or cancel flow as working source of truth.
+3. **Load the workflow** — Read `./references/workflow.md` and identify the appropriate workflow phase based on the user's request.
+4. **Diagnose before prescribing** — Always start with churn diagnosis. Ask for churn rate, churn type breakdown (voluntary vs involuntary), exit survey data, and cohort retention curves before recommending interventions.
+5. **Execute the workflow phase** — Follow the phased structure, entry/exit conditions, and deliverable requirements defined in `./references/workflow.md`. Address involuntary churn (payment failures) first — it has the highest recovery rate.
+6. **Deliver structured output** — Produce deliverables matching the workflow's output specifications (cancel flows, dunning sequences, health score models, or win-back campaigns).
+7. **Save deliverables** — Write to the resolved path (see Path Resolution).
+8. **Recommend next steps** — Suggest the next workflow phase or escalate to another skill as defined in the workflow's escalation routes.
 
 ## Path Resolution
 
@@ -80,3 +94,14 @@ For cancel flow, dunning, win-back, or proactive retention copy:
 | Onboarding activation failure | paw-mkt-cro |
 | Email deliverability issues | paw-mkt-email |
 | Educational content gap | paw-mkt-content |
+
+## Output Contract
+
+Every retention deliverable includes:
+
+- **Intervention type**: cancel flow, dunning sequence, win-back campaign, or health score model
+- **Churn type addressed**: voluntary, involuntary, or both
+- **Target segment**: which customer cohort or behavior trigger this targets
+- **Success metric**: retention rate, save rate, recovery rate, or reactivation rate with target
+- **Measurement method**: how outcomes will be tracked and attributed
+- **File saved to**: resolved path where the deliverable was written

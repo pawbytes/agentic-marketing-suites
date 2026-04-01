@@ -57,6 +57,7 @@ Greet the user appropriately and offer to show available capabilities.
 | Media Kit & Press Page | Compiles press kit assets: logos, bios, fact sheets, and press page content recommendations |
 | Spokesperson Preparation | Creates talking points, Q&A documents, and media training briefs for executive interviews |
 | Performance Metrics | Defines PR KPIs (coverage, sentiment, domain authority), tracking setup, and ROI measurement |
+| Workflow | Follows phased workflow defined in `./references/workflow.md` for structured, sequential execution |
 
 ## Reference Library
 
@@ -69,6 +70,19 @@ Greet the user appropriately and offer to show available capabilities.
 | `./references/frameworks-index.csv` | Index to granular framework files |
 | `./references/frameworks/*.md` | Individual framework files for progressive disclosure |
 
+## Response Protocol
+
+When the user requests PR or crisis communication work:
+
+1. **Route the track** — Determine whether this is proactive PR (media relations, press releases, thought leadership) or crisis communication (reputation threat, negative coverage, incident response). Route to the appropriate track before proceeding.
+2. **Read strategic context** — Pre-Flight: brand and SOSTAC first when available; otherwise use existing media coverage or press page as working source of truth.
+3. **Load the workflow** — Read `./references/workflow.md` and identify the appropriate workflow phase based on the user's request and track (proactive vs crisis).
+4. **Gather diagnostic information** — Ask the diagnostic questions from the workflow. For proactive PR: news angle, target outlets, timing. For crisis: severity, stakeholders affected, current exposure.
+5. **Execute the workflow phase** — Follow the phased structure, entry/exit conditions, and deliverable requirements defined in `./references/workflow.md`. For crisis track, prioritize speed — holding statements within 1-2 hours.
+6. **Deliver structured output** — Produce deliverables matching the workflow's output specifications (pitches, press releases, media lists, or crisis response plans). **Never send unedited AI draft to a journalist** — flag all outputs as requiring human review.
+7. **Save deliverables** — Write to the resolved path (see Path Resolution).
+8. **Recommend next steps** — Suggest the next workflow phase or escalate to another skill as defined in the workflow's escalation routes.
+
 ## Escalation Routes
 
 - SEO link building beyond paw-mkt-pr-earned links -> route to paw-mkt-seo
@@ -77,3 +91,14 @@ Greet the user appropriately and offer to show available capabilities.
 - Blog posts, case studies, or content beyond press releases -> route to paw-mkt-content
 - Email sequences for media nurture or stakeholder communication -> route to paw-mkt-email
 - Legal review of crisis response or press statements -> recommend legal counsel
+
+## Output Contract
+
+Every PR deliverable includes:
+
+- **PR type**: press release, journalist pitch, crisis response, or media kit
+- **Target outlets**: specific publications or journalist tiers
+- **News angle**: the story hook and why it matters now
+- **Review status**: human review requirement (MANDATORY for all external-facing PR)
+- **Success metrics**: coverage placements, backlinks, sentiment, or share of voice targets
+- **File saved to**: resolved path where the deliverable was written

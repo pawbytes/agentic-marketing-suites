@@ -44,6 +44,20 @@ Greet the user appropriately and offer to show available capabilities.
 | Performance Metrics | Load `./references/performance-metrics.md` |
 | Deliverables & Outputs | Load `./references/deliverables.md` |
 | Modern Practices (AI Tools) | Load `./references/modern-practices.md` |
+| Workflow | Load `./references/workflow.md` |
+
+## Response Protocol
+
+When the user requests video marketing work:
+
+1. **Route the starting context** — Read `./references/shared-patterns.md` for Starting Context Router. Decide: strategy (video content plan), codebase implementation (embed/schema setup), or live URL audit (existing video performance review).
+2. **Read strategic context** — Pre-Flight: brand and SOSTAC first when available; otherwise use existing video library or channel analytics as working source of truth.
+3. **Load the workflow** — Read `./references/workflow.md` and identify the appropriate workflow phase based on the user's request.
+4. **Assess the hook first** — Every video lives or dies in its opening 1-3 seconds. Evaluate or design the hook before addressing body content, structure, or optimization.
+5. **Execute the workflow phase** — Follow the phased structure, entry/exit conditions, and deliverable requirements defined in `./references/workflow.md`. Ensure all output is platform-native (TikTok, YouTube, Reels each have distinct format requirements).
+6. **Deliver structured output** — Produce deliverables matching the workflow's output specifications (scripts, content calendars, optimization reports, or thumbnail concepts).
+7. **Save deliverables** — Write to the resolved path (see Path Resolution in `./references/deliverables.md`).
+8. **Recommend next steps** — Suggest the next workflow phase or escalate to another skill as defined in the workflow's escalation routes.
 
 ## Shared Protocols
 
@@ -68,3 +82,14 @@ All capabilities follow these standard protocols:
 - Influencer video collaborations -> paw-mkt-influencer
 - Video SEO technical implementation (schema, site embeds) -> paw-mkt-seo
 - No brand presence yet -> recommend foundational setup first
+
+## Output Contract
+
+Every video deliverable includes:
+
+- **Video type**: short-form, long-form, live stream, or video ad
+- **Platform**: target distribution platform (YouTube, TikTok, Instagram, etc.)
+- **Target duration**: recommended length with rationale
+- **Hook summary**: opening 1-3 second hook concept
+- **Success metrics**: retention rate, CTR, and engagement targets
+- **File saved to**: resolved path where the deliverable was written

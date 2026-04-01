@@ -79,6 +79,19 @@ If unsure which mode, ask: "Is this part of a specific campaign, or standalone w
 | Playbooks | Load `./references/playbooks.md` |
 | Experiment Templates | Load `./references/experiment-templates.md` |
 
+## Response Protocol
+
+When the user requests guerrilla marketing or growth hacking work:
+
+1. **Route the starting context** — Read `./references/shared-patterns.md` for Starting Context Router. Decide: strategy (new tactic design), codebase implementation (growth experiment setup), or live URL audit (existing funnel or campaign review).
+2. **Read strategic context** — Pre-Flight: brand and SOSTAC first when available; otherwise use existing growth data or competitive landscape as working source of truth.
+3. **Load the workflow** — Read `./references/workflow.md` and identify the appropriate workflow phase based on the user's request.
+4. **Mandatory risk assessment** — Before any tactic reaches execution, evaluate legal exposure, reputational risk, operational complexity, and reversibility. No tactic ships without a documented risk/reward ratio and mitigation plan.
+5. **Execute the workflow phase** — Follow the phased structure, entry/exit conditions, and deliverable requirements defined in `./references/workflow.md`. Every experiment follows hypothesis > design > measure > learn.
+6. **Deliver structured output** — Produce deliverables matching the workflow's output specifications (tactic briefs, experiment designs, campaign plans, or risk assessments).
+7. **Save deliverables** — Write to the resolved path (see Path Resolution).
+8. **Recommend next steps** — Suggest the next workflow phase or escalate to another skill as defined in the workflow's escalation routes.
+
 ## Escalation Routes
 
 - Paid advertising beyond keyword conquesting -> route to paw-mkt-paid-ads
@@ -88,3 +101,15 @@ If unsure which mode, ask: "Is this part of a specific campaign, or standalone w
 - SEO beyond competitor keyword targeting -> route to paw-mkt-seo
 - Email automation for referral and switching campaigns -> route to paw-mkt-email
 - Content creation for comparison pages -> route to paw-mkt-content
+
+## Output Contract
+
+Every guerrilla marketing deliverable includes:
+
+- **Tactic type**: budget guerrilla, viral stunt, competitive disruption, or growth experiment
+- **Risk assessment score**: ICE-R rating (Impact, Confidence, Ease, Risk)
+- **Hypothesis**: what this tactic tests and expected outcome
+- **Success metric**: specific KPI with target and measurement method
+- **Budget required**: estimated cost and resource needs
+- **Legal/ethical clearance status**: review status and any flags identified
+- **File saved to**: resolved path where the deliverable was written

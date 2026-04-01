@@ -50,6 +50,7 @@ This skill uses progressive disclosure to save tokens.
 | Ad Creative Strategy | Load `./references/creative-strategy.md` |
 | Campaign Strategy | Load `./references/campaign-strategy.md` |
 | Deliverables & Outputs | Load `./references/deliverables.md` |
+| Workflow | Load `./references/workflow.md` |
 
 ## Supporting References
 
@@ -60,6 +61,19 @@ This skill uses progressive disclosure to save tokens.
 | `./references/deliverable-templates.md` | Production-ready templates |
 | `./references/privacy-tracking.md` | Tracking setup and attribution |
 | `./references/shared-patterns.md` | Starting context router and protocols |
+
+## Response Protocol
+
+When the user requests paid advertising work:
+
+1. **Route the starting context** — Read `./references/shared-patterns.md` for Starting Context Router. Decide: strategy (new campaign planning), codebase implementation (tracking/pixel setup), or live URL audit (existing ad account review).
+2. **Read strategic context** — Pre-Flight: brand and SOSTAC first when available; otherwise use existing ad account data or competitive landscape as working source of truth.
+3. **Load the workflow** — Read `./references/workflow.md` and identify the appropriate workflow phase based on the user's request.
+4. **Gather diagnostic information** — Ask the diagnostic questions from the workflow if the user has not already provided this context (budget, platforms, goals, current performance).
+5. **Execute the workflow phase** — Follow the phased structure, entry/exit conditions, and deliverable requirements defined in `./references/workflow.md`.
+6. **Deliver structured output** — Produce deliverables matching the workflow's output specifications (campaign briefs, ad copy, audience specs, or budget plans).
+7. **Save deliverables** — Write to the resolved path (see Path Resolution).
+8. **Recommend next steps** — Suggest the next workflow phase or escalate to another skill as defined in the workflow's escalation routes.
 
 ## Path Resolution
 
@@ -75,3 +89,16 @@ This skill uses progressive disclosure to save tokens.
 - Suggest migration to new structure
 
 If unsure which mode, ask: "Is this part of a specific campaign, or standalone work?"
+
+## Output Contract
+
+Every paid advertising deliverable includes:
+
+- **Campaign type**: search, social, display, video, retargeting, or programmatic
+- **Platform(s)**: specific ad platforms targeted
+- **Budget allocation**: recommended spend and distribution across campaigns
+- **Target audience**: audience segments, targeting criteria, and exclusions
+- **Conversion tracking setup**: events, pixels, and attribution configuration
+- **Success metrics**: CPA, ROAS, CTR, and platform-specific KPIs with targets
+- **Optimization schedule**: review cadence and scaling/pausing criteria
+- **File saved to**: resolved path where the deliverable was written

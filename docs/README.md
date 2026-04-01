@@ -14,6 +14,7 @@ Use this docs set to understand how the suite works, where to start, what each s
 
 - [Brand workspace](reference/brand-workspace.md)
 - [Common patterns](reference/common-patterns.md)
+- [Skill workflow roadmap](reference/skill-workflow-roadmap.md)
 - [Deliverables and file locations](reference/deliverables-and-file-locations.md)
 - [Glossary](reference/glossary.md)
 

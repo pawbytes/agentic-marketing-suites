@@ -42,6 +42,7 @@ Greet the user appropriately and offer to show available capabilities.
 | Growth Tactics | Delivers follower acquisition strategies: collaboration plays, hashtag systems, and cross-promotion |
 | Analytics | Maps platform KPIs to business metrics, defines reporting cadence and benchmark targets |
 | Deliverables | Produces content calendars, caption templates, hashtag sets, and platform-native asset specs |
+| Workflow | Follows phased workflow defined in `./references/workflow.md` for structured, sequential execution |
 
 ## Reference Lookup Protocol
 
@@ -70,3 +71,14 @@ See `./references/shared-patterns.md` for Starting Context Router and Pre-Flight
 - Deep influencer campaigns -- route to paw-mkt-influencer
 - Video production beyond social clips -- route to paw-mkt-video
 - Crisis escalating beyond social -- flag for PR specialist
+
+## Output Contract
+
+Every social media deliverable includes:
+
+- **Content type**: strategy, content calendar, caption set, or platform playbook
+- **Platform(s)**: specific social platforms targeted
+- **Posting cadence**: recommended frequency and timing
+- **Audience segment**: who this content is designed to reach and engage
+- **Success metrics**: engagement rate, reach, follower growth, and conversion targets
+- **File saved to**: resolved path where the deliverable was written

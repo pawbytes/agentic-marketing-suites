@@ -71,6 +71,7 @@ If unsure which mode, ask: "Is this part of a specific campaign, or standalone w
 | Content Repurposing | Transforms pillar content into derivatives: social posts, email snippets, video scripts, infographics |
 | Content Performance | Defines KPIs, tracking setup, and reporting cadence for measuring content ROI |
 | Modern Practices (AI/GEO) | Adapts content for AI search optimization, featured snippets, and LLM citation potential |
+| Workflow | Follows phased workflow defined in `./references/workflow.md` for structured, sequential execution |
 
 ## Response Protocol
 

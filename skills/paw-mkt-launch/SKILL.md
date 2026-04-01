@@ -59,6 +59,7 @@ See `./references/shared-patterns.md` for Starting Context Router and Pre-Flight
 | Metrics and Success Criteria | Load `./references/launch-metrics.md` |
 | Deliverables and File Structure | Load `./references/launch-deliverables.md` |
 | Research Mode (agent-browser) | See `./references/shared-patterns.md` for setup |
+| Workflow | Load `./references/workflow.md` |
 
 ## Response Protocol
 1. Route starting context (blank-page, codebase, or live URL)

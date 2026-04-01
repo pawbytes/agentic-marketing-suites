@@ -46,6 +46,7 @@ See `./references/shared-patterns.md` for Starting Context Router and Pre-Flight
 | Modern Practices | Load `./references/modern-practices.md` |
 | Outputs & Deliverables | Load `./references/outputs.md` |
 | Benchmarks & Data | Load `./references/benchmarks.md` or `./references/best-practices.md` |
+| Workflow | Load `./references/workflow.md` |
 
 ## Reference Lookup Protocol
 1. Read `./references/frameworks-index.csv` for indexed framework files.

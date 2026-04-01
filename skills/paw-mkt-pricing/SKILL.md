@@ -41,6 +41,20 @@ Greet the user appropriately and offer to show available capabilities.
 | Pricing Research Methods | Load `./references/pricing-research.md` |
 | Segment-Specific Pricing | Load `./references/segment-pricing.md` |
 | Shared Patterns | Load `./references/shared-patterns.md` |
+| Workflow | Load `./references/workflow.md` |
+
+## Response Protocol
+
+When the user requests pricing strategy work:
+
+1. **Route the starting context** — Read `./references/shared-patterns.md` for Starting Context Router. Decide: strategy (new pricing model), codebase implementation (pricing page build), or live URL audit (existing pricing page review).
+2. **Read strategic context** — Pre-Flight: brand and SOSTAC first when available; otherwise use existing pricing data or competitor pricing as working source of truth.
+3. **Load the workflow** — Read `./references/workflow.md` and identify the appropriate workflow phase based on the user's request.
+4. **Diagnose before prescribing** — Always classify the pricing problem first (value metric misalignment, tier structure, price point, packaging, or communication issue). Different symptoms require different fixes.
+5. **Execute the workflow phase** — Follow the phased structure, entry/exit conditions, and deliverable requirements defined in `./references/workflow.md`. Ground every price point in competitive anchors, willingness-to-pay data, or value quantification.
+6. **Deliver structured output** — Produce deliverables matching the workflow's output specifications (pricing models, tier structures, research designs, or pricing page recommendations).
+7. **Save deliverables** — Write to the resolved path (see Path Resolution).
+8. **Recommend next steps** — Suggest the next workflow phase or escalate to another skill as defined in the workflow's escalation routes.
 
 ## Reference Lookup Protocol
 

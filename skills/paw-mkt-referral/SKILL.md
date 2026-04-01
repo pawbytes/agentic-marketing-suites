@@ -58,6 +58,7 @@ If unsure which mode, ask: "Is this part of a specific campaign, or standalone w
 | Metrics and Measurement | Load `./references/metrics-measurement.md` |
 | Modern Practices | Load `./references/modern-practices.md` |
 | Outputs and Deliverables | Load `./references/outputs-deliverables.md` |
+| Workflow | Load `./references/workflow.md` |
 
 ## Shared Patterns
 
@@ -93,3 +94,14 @@ When the user requests referral, affiliate, or partnership marketing work:
 - Content for co-marketing assets -> route to paw-mkt-content
 - Paid ads or social promotion -> route to paw-mkt-paid-ads or paw-mkt-social
 - PR for partnership announcements -> route to paw-mkt-pr
+
+## Output Contract
+
+Every referral and partnership deliverable includes:
+
+- **Program type**: referral, affiliate, strategic partnership, or co-marketing
+- **Incentive structure**: reward mechanics for both referrer and referred
+- **K-factor target**: viral coefficient goal with invites-sent and conversion-per-invite breakdown
+- **Tracking method**: attribution setup and fraud prevention measures
+- **Success metrics**: referral conversion rate, CAC via referral, and program ROI targets
+- **File saved to**: resolved path where the deliverable was written
