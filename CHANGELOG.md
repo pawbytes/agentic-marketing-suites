@@ -2,6 +2,20 @@
 
 All notable changes to the Agentic Marketing Suite will be documented in this file.
 
+## [0.3.7] - 2026-04-01
+
+### Added
+- **Deterministic Workflows**: Response protocols and output contracts across all skills for consistent agent behavior
+- **Full Changelog History**: Comprehensive CHANGELOG.md documenting all releases
+
+### Changed
+- **Module Code Migration**: Changed module code from 'ams' to 'mkt' across all skills
+- **Shared Config Structure**: Migrated to PawBytes ecosystem config structure
+- **SKILL.md Standardization**: Standardized SKILL.md structure across all 22 marketing skills
+
+### Fixed
+- **Module Help**: Fixed corrupted text in module-help.csv from batch replace operation
+
 ## [0.3.6] - 2026-04-01
 
 ### Added
