@@ -2,6 +2,11 @@
 
 All notable changes to the Agentic Marketing Suite will be documented in this file.
 
+## [0.5.0] - 2026-04-02
+
+### Features
+- **Dashboard Documents Route**: `paw-mkt-dashboard` now collects all `.md` files from brand workspaces during discovery and renders them as read-only formatted HTML in a `/documents` route — index page grouped by category with individual document detail views using server-side markdown rendering via `marked`
+
 ## [0.4.0] - 2026-04-02
 
 ### Added
@@ -109,6 +114,8 @@ All notable changes to the Agentic Marketing Suite will be documented in this fi
 
 | Version | Date | Skills Count | Key Changes |
 |---------|------|--------------|-------------|
+| 0.5.0 | 2026-04-02 | 22 | Dashboard documents route with markdown rendering |
+| 0.4.0 | 2026-04-02 | 22 | Dashboard skill, escalation routes |
 | 0.3.6 | 2026-04-01 | 21 | SOSTAC editing, HITL gates, tool discovery |
 | 0.3.5 | 2026-03-31 | 21 | Repository migration, skill renaming |
 | 0.3.0 | 2026-03-08 | 21 | Marketplace installation, normalized routing |
