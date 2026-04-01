@@ -73,3 +73,24 @@ Every analytics deliverable includes:
 - **Stakeholder audience**: who receives and acts on this output
 - **Reporting cadence**: frequency of review and distribution
 - **File saved to**: resolved path where the deliverable was written
+
+## Path Resolution
+
+**Campaign mode**: Save to `./.pawbytes/marketing-suites/brands/{brand-slug}/campaigns/{type}-{campaign-slug}/analytics/`
+
+**Standalone mode**: Save to `./.pawbytes/marketing-suites/brands/{brand-slug}/operations/analytics/`
+
+**Legacy fallback**: Save to `./.pawbytes/marketing-suites/brands/{brand-slug}/campaigns/analytics/` and suggest migration.
+
+If unsure which mode, ask: "Is this part of a specific campaign, or standalone work?"
+
+## Escalation Routes
+
+| Signal | Routes To |
+|--------|-----------|
+| Conversion optimization beyond measurement | paw-mkt-cro |
+| Content performance requiring editorial changes | paw-mkt-content |
+| Attribution showing paid channel issues | paw-mkt-paid-ads |
+| SEO metrics requiring technical fixes | paw-mkt-seo |
+| Email engagement metrics declining | paw-mkt-email |
+| Retention cohort analysis revealing churn patterns | paw-mkt-retention |

@@ -50,9 +50,71 @@ Greet the user and offer to show available capabilities.
 | Martech Landscape | Load `./references/martech-landscape.md` |
 | Best Practices | Load `./references/best-practices.md` |
 
+## Response Protocol
+
+When the user requests marketing coordination or routing:
+
+1. **Assess the request** — Determine if this is a new brand onboarding, SOSTAC routing, campaign coordination, team spawning, or a specialist request that should be routed directly.
+2. **Read brand context** — Check for existing brand workspace, SOSTAC progress, and active campaigns before recommending next steps.
+3. **Route or coordinate** — For single-skill requests, route directly to the appropriate specialist. For multi-channel work, assess SOSTAC readiness and spawn teams as needed.
+4. **Track progress** — Update campaign progress tracking after routing or team completion.
+5. **Save coordination artifacts** — Write routing decisions, team compositions, and status updates to the brand workspace.
+6. **Recommend next steps** — Based on SOSTAC progress and campaign status, suggest the logical next action.
+
+## Path Resolution
+
+**Brand workspace root**: `./.pawbytes/marketing-suites/brands/{brand-slug}/`
+
+**SOSTAC plans**: `./.pawbytes/marketing-suites/brands/{brand-slug}/sostac/`
+
+**Campaign coordination**: `./.pawbytes/marketing-suites/brands/{brand-slug}/campaigns/{type}-{campaign-slug}/`
+
+**Progress tracking**: `./.pawbytes/marketing-suites/brands/{brand-slug}/status.md`
+
+If no brand slug is known, prompt for brand selection first.
+
 ## Reference Lookup Protocol
+
 This skill uses progressive disclosure:
 1. Read `./references/frameworks-index.csv` — lightweight index (~10 rows)
 2. Match user's situation to `best_for` column
 3. Read ONLY matched framework file(s) from `./references/frameworks/`
 4. Never bulk-read all framework files
+
+## Escalation Routes
+
+As the coordinator, this skill routes outbound to all specialists:
+
+| Signal | Routes To |
+|--------|-----------|
+| SEO, keywords, technical audit | paw-mkt-seo |
+| Content, blog, editorial | paw-mkt-content |
+| Paid ads, PPC, retargeting | paw-mkt-paid-ads |
+| Email sequences, newsletters | paw-mkt-email |
+| Social media, organic | paw-mkt-social |
+| Influencer, creator partnerships | paw-mkt-influencer |
+| PR, press, crisis comms | paw-mkt-pr |
+| CRO, conversion optimization | paw-mkt-cro |
+| Launch, GTM, Product Hunt | paw-mkt-launch |
+| Pricing, packaging | paw-mkt-pricing |
+| Retention, churn, dunning | paw-mkt-retention |
+| Community, Discord/Slack | paw-mkt-community |
+| Referral, affiliate, partnerships | paw-mkt-referral |
+| Sales enablement, decks | paw-mkt-sales |
+| Analytics, tracking, dashboards | paw-mkt-analytics |
+| Video, YouTube, TikTok | paw-mkt-video |
+| Psychology, persuasion | paw-mkt-psychology |
+| Guerrilla, growth hacks | paw-mkt-guerrilla |
+| Positioning, personas, ICP | paw-mkt-product-context |
+| SOSTAC planning | paw-mkt-sostac |
+
+## Output Contract
+
+Every coordination deliverable includes:
+
+- **Action type**: routing decision, team spawn, brand onboarding, or progress update
+- **Brand**: which brand workspace this applies to
+- **SOSTAC status**: current phase completion (e.g., 4/6 phases complete)
+- **Skills involved**: which specialists were routed to or spawned
+- **Next recommended action**: what the user should do next
+- **File saved to**: resolved path where the coordination artifact was written

@@ -102,3 +102,15 @@ Every paid advertising deliverable includes:
 - **Success metrics**: CPA, ROAS, CTR, and platform-specific KPIs with targets
 - **Optimization schedule**: review cadence and scaling/pausing criteria
 - **File saved to**: resolved path where the deliverable was written
+
+## Escalation Routes
+
+| Signal | Routes To |
+|--------|-----------|
+| Organic SEO complement to paid strategy | paw-mkt-seo |
+| Landing page conversion issues | paw-mkt-cro |
+| Ad creative needs psychological framing | paw-mkt-psychology |
+| Retargeting needs email nurture sequences | paw-mkt-email |
+| Influencer content for paid amplification | paw-mkt-influencer |
+| Attribution and measurement setup | paw-mkt-analytics |
+| Video ad production | paw-mkt-video |

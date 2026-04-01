@@ -45,7 +45,7 @@ Greet appropriately and offer to show available capabilities.
 | Metrics Tracking | Load `./references/metrics.md` |
 | Workflow | Load `./references/workflow.md` |
 
-## Reference Files
+## Reference Lookup Protocol
 
 | File | Purpose |
 |------|---------|
@@ -89,3 +89,14 @@ Every sales enablement deliverable includes:
 - **Competitive claims verified**: yes/no — all competitor comparisons fact-checked
 - **Proof points sourced**: yes/no — metrics and customer quotes attributed to verifiable sources
 - **File saved to**: resolved path where the deliverable was written
+
+## Escalation Routes
+
+| Signal | Routes To |
+|--------|-----------|
+| Content creation beyond sales collateral | paw-mkt-content |
+| Pricing strategy questions | paw-mkt-pricing |
+| Behavioral framing for objection handling | paw-mkt-psychology |
+| Case study needs deeper customer story | paw-mkt-content |
+| Lead nurture email sequences | paw-mkt-email |
+| Competitive intelligence for battle cards | paw-mkt-agency (research coordination) |

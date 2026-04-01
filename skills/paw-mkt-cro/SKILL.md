@@ -74,6 +74,27 @@ When the user requests CRO or conversion optimization work:
 7. **Save deliverables** — Write to the resolved path (see Path Resolution).
 8. **Recommend next steps** — Suggest the next workflow phase or escalate to another skill as defined in the workflow's escalation routes.
 
+## Path Resolution
+
+**Campaign mode**: Save to `./.pawbytes/marketing-suites/brands/{brand-slug}/campaigns/{type}-{campaign-slug}/cro/`
+
+**Standalone mode**: Save to `./.pawbytes/marketing-suites/brands/{brand-slug}/operations/cro/`
+
+**Legacy fallback**: Save to `./.pawbytes/marketing-suites/brands/{brand-slug}/campaigns/cro/` and suggest migration.
+
+If unsure which mode, ask: "Is this part of a specific campaign, or standalone work?"
+
+## Escalation Routes
+
+| Signal | Routes To |
+|--------|-----------|
+| SEO issues affecting landing page performance | paw-mkt-seo |
+| Email sequence needed for nurture flow | paw-mkt-email |
+| Pricing page restructuring needed | paw-mkt-pricing |
+| Behavioral psychology input for copy | paw-mkt-psychology |
+| Analytics tracking gaps blocking measurement | paw-mkt-analytics |
+| Content quality issues on pages | paw-mkt-content |
+
 ## Output Contract
 
 Every CRO deliverable includes:

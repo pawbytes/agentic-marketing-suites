@@ -29,7 +29,7 @@ Load available config from `{project-root}/.pawbytes/marketing-suites/config/con
 
 Greet the user appropriately and offer to show available capabilities.
 
-## Progressive Disclosure Protocol
+## Reference Lookup Protocol
 1. Read `./references/frameworks-index.csv` for checklist frameworks
 2. Match user's situation to the `best_for` column
 3. Read ONLY matched framework files from `./references/frameworks/`
@@ -71,7 +71,7 @@ See `./references/shared-patterns.md` for Starting Context Router and Pre-Flight
 7. Save deliverables to resolved path with appropriate filenames
 8. Recommend next steps with owners and timing
 
-## Escalation Bridges
+## Escalation Routes
 - Press release and journalist outreach → paw-mkt-pr
 - Post-launch email sequences → paw-mkt-email
 - Paid retargeting → paw-mkt-paid-ads

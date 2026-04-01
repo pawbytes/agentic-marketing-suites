@@ -57,6 +57,16 @@ This skill uses progressive disclosure to save tokens:
 
 See `./references/shared-patterns.md` for Starting Context Router and Pre-Flight protocols.
 
+## Path Resolution
+
+**Campaign mode**: Save to `./.pawbytes/marketing-suites/brands/{brand-slug}/campaigns/{type}-{campaign-slug}/channels/social/content/`
+
+**Standalone mode**: Save to `./.pawbytes/marketing-suites/brands/{brand-slug}/channels/social/content/`
+
+**Legacy fallback**: Save to `./.pawbytes/marketing-suites/brands/{brand-slug}/content/social/` and suggest migration.
+
+If unsure which mode, ask: "Is this part of a specific campaign, or standalone work?"
+
 ## Response Protocol
 
 1. Read brand context and SOSTAC when available
@@ -66,11 +76,16 @@ See `./references/shared-patterns.md` for Starting Context Router and Pre-Flight
 5. Save deliverables: Write all outputs to the resolved path
 6. Recommend next steps: What to post first, what to test, when to review
 
-### When to Escalate
-- Paid social advertising -- route to paw-mkt-paid-ads
-- Deep influencer campaigns -- route to paw-mkt-influencer
-- Video production beyond social clips -- route to paw-mkt-video
-- Crisis escalating beyond social -- flag for PR specialist
+## Escalation Routes
+
+| Signal | Routes To |
+|--------|-----------|
+| Paid social advertising | paw-mkt-paid-ads |
+| Deep influencer campaigns | paw-mkt-influencer |
+| Video production beyond social clips | paw-mkt-video |
+| Crisis escalating beyond social | paw-mkt-pr |
+| Community platform management (Discord/Slack) | paw-mkt-community |
+| Content creation beyond social posts | paw-mkt-content |
 
 ## Output Contract
 

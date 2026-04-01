@@ -85,7 +85,7 @@ For cancel flow, dunning, win-back, or proactive retention copy:
 | Subject line selection | `frameworks/subject-line-reference.md` |
 | Cancel flow A/B testing | `frameworks/cancel-flow-ab-testing.md` |
 
-## Escalation Signals
+## Escalation Routes
 
 | Signal Detected | Escalate To |
 |---|---|

@@ -59,7 +59,17 @@ Greet the user appropriately and offer to show available capabilities.
 | Performance Metrics | Defines PR KPIs (coverage, sentiment, domain authority), tracking setup, and ROI measurement |
 | Workflow | Follows phased workflow defined in `./references/workflow.md` for structured, sequential execution |
 
-## Reference Library
+## Path Resolution
+
+**Campaign mode**: Save to `./.pawbytes/marketing-suites/brands/{brand-slug}/campaigns/{type}-{campaign-slug}/channels/pr/content/`
+
+**Standalone mode**: Save to `./.pawbytes/marketing-suites/brands/{brand-slug}/channels/pr/content/`
+
+**Legacy fallback**: Save to `./.pawbytes/marketing-suites/brands/{brand-slug}/content/pr/` and suggest migration.
+
+If unsure which mode, ask: "Is this part of a specific campaign, or standalone work?"
+
+## Reference Lookup Protocol
 
 | Resource | Purpose |
 |----------|---------|

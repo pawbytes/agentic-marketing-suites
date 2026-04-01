@@ -68,7 +68,7 @@ Read strategic context from `./references/shared-patterns.md` before any email w
 5. Save to resolved path
 6. Recommend next steps
 
-## Bidirectional Escalation
+## Escalation Routes
 
 | Signal | Route To |
 |--------|----------|

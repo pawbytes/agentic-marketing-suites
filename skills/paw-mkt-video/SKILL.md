@@ -59,11 +59,10 @@ When the user requests video marketing work:
 7. **Save deliverables** — Write to the resolved path (see Path Resolution in `./references/deliverables.md`).
 8. **Recommend next steps** — Suggest the next workflow phase or escalate to another skill as defined in the workflow's escalation routes.
 
-## Shared Protocols
+## Reference Lookup Protocol
 
 All capabilities follow these standard protocols:
 
-**Reference Lookup Protocol:**
 - General frameworks: Read `./references/frameworks-index.csv`, match situation, load only matched file(s) from `./references/frameworks/`
 - Viral frameworks: Read `./references/viral-frameworks-index.csv`, match situation, load only matched file(s) from `./references/viral-frameworks/`
 - Best practices and shared patterns: Read directly from `./references/best-practices.md` and `./references/shared-patterns.md`
@@ -72,7 +71,13 @@ All capabilities follow these standard protocols:
 
 **Pre-Flight:** Read brand context and SOSTAC before recommendations. See `./references/shared-patterns.md`.
 
-**Path Resolution:** Campaign vs standalone mode determines save paths. See `./references/deliverables.md`.
+## Path Resolution
+
+**Campaign mode**: Save to `./.pawbytes/marketing-suites/brands/{brand-slug}/campaigns/{type}-{campaign-slug}/channels/video/content/`
+
+**Standalone mode**: Save to `./.pawbytes/marketing-suites/brands/{brand-slug}/channels/video/content/`
+
+See `./references/deliverables.md` for detailed output specs.
 
 ## Escalation Routes
 

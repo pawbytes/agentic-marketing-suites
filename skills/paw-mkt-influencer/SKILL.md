@@ -81,4 +81,12 @@ General references (best-practices.md, benchmarks.md, shared-patterns.md) are re
 - No brand presence yet → recommend foundational setup first
 
 ## Output Contract
-Deliverables include: campaign type, creator shortlist with fit rationale, brief/scope, budget breakdown, success metrics, file saved to path.
+
+Every influencer deliverable includes:
+
+- **Campaign type**: ambassador program, one-off activation, UGC program, or affiliate partnership
+- **Creator shortlist**: names/handles with fit rationale and tier classification
+- **Brief or scope**: creative direction, deliverables, timeline, and usage rights
+- **Budget breakdown**: per-creator cost, total budget, and payment structure
+- **Success metrics**: engagement rate, reach, conversions, and ROI targets
+- **File saved to**: resolved path where the deliverable was written

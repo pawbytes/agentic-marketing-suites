@@ -93,3 +93,15 @@ SEO deliverables include:
 - **Implementation notes**: what to change and where
 - **Expected impact**: which metrics should improve
 - **File saved to**: path where deliverable was written
+
+## Escalation Routes
+
+| Signal | Routes To |
+|--------|-----------|
+| Content creation beyond keyword briefs | paw-mkt-content |
+| Link building via PR and earned media | paw-mkt-pr |
+| Landing page conversion optimization | paw-mkt-cro |
+| Paid search complement to organic | paw-mkt-paid-ads |
+| Video SEO requiring video strategy | paw-mkt-video |
+| Analytics and attribution setup | paw-mkt-analytics |
+| AI search optimization requiring positioning refresh | paw-mkt-product-context |

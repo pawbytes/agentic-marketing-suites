@@ -80,3 +80,34 @@ Product marketing context deliverables include:
 - **Differentiation** — competitive advantages with proof points
 - **Customer language** — actual phrases and terms the audience uses
 - **Messaging framework** — hierarchy of messages by persona and funnel stage
+- **File saved to** — resolved path where the document was written
+
+## Response Protocol
+
+When the user requests product positioning or context work:
+
+1. **Route the starting context** — Read `./references/shared-patterns.md` for Starting Context Router. Decide: new brand (blank-page), existing SOSTAC (extract-first), or update (gap-scan).
+2. **Read strategic context** — Pre-Flight: check for existing brand-context.md and SOSTAC files. Extract positioning intelligence before asking questions.
+3. **Assess document completeness** — Load `./references/check-existing.md` to evaluate which of the 12 sections are complete, partial, or missing.
+4. **Conduct focused interview** — Ask only for gaps not answered by existing materials. Use verbatim customer language whenever possible.
+5. **Build or update the document** — Follow `./references/document-template.md` for the 12-section structure. Sync with brand-context.md.
+6. **Save deliverables** — Write to the resolved path.
+7. **Recommend next steps** — Suggest which marketing specialists should read the updated context, or flag sections needing more customer research.
+
+## Path Resolution
+
+**Brand workspace**: Save to `./.pawbytes/marketing-suites/brands/{brand-slug}/paw-mkt-product-context.md`
+
+**Legacy fallback**: Check `./.pawbytes/marketing-suites/brands/{brand-slug}/brand-context.md` for existing content and sync.
+
+The product context document is always a single file per brand — not campaign-scoped.
+
+## Escalation Routes
+
+| Signal | Routes To |
+|--------|-----------|
+| Full SOSTAC plan needed before positioning | paw-mkt-sostac |
+| Competitive analysis requires deeper research | paw-mkt-agency (for research coordination) |
+| Pricing positioning questions arise | paw-mkt-pricing |
+| Content strategy needs the positioning doc | paw-mkt-content |
+| Sales messaging alignment needed | paw-mkt-sales |

@@ -65,7 +65,7 @@ If unsure which mode, ask: "Is this part of a specific campaign, or standalone w
 For starting context routing and pre-flight procedures:
 - See `./references/shared-patterns.md`
 
-## Reference Libraries
+## Reference Lookup Protocol
 
 | Library | Purpose |
 |---------|---------|
@@ -86,14 +86,16 @@ When the user requests referral, affiliate, or partnership marketing work:
 6. **Save deliverables** — write to resolved path when working in brand workspace
 7. **Recommend first move** — which program, which partners, what to measure
 
-### When to Escalate
+## Escalation Routes
 
-- Influencer campaigns beyond affiliate -> route to paw-mkt-influencer
-- Community building for advocates -> route to paw-mkt-community
-- Email sequences for nurture -> route to paw-mkt-email
-- Content for co-marketing assets -> route to paw-mkt-content
-- Paid ads or social promotion -> route to paw-mkt-paid-ads or paw-mkt-social
-- PR for partnership announcements -> route to paw-mkt-pr
+| Signal | Routes To |
+|--------|-----------|
+| Influencer campaigns beyond affiliate | paw-mkt-influencer |
+| Community building for advocates | paw-mkt-community |
+| Email sequences for nurture | paw-mkt-email |
+| Content for co-marketing assets | paw-mkt-content |
+| Paid ads or social promotion | paw-mkt-paid-ads or paw-mkt-social |
+| PR for partnership announcements | paw-mkt-pr |
 
 ## Output Contract
 

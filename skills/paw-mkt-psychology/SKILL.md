@@ -97,6 +97,16 @@ Every psychology recommendation must pass ethical verification before delivery. 
 3. Is all information presented truthfully, without manufactured urgency or fabricated scarcity?
 4. Would a regulatory body reviewing this tactic consider it compliant?
 
+## Path Resolution
+
+**Campaign mode**: Save to `./.pawbytes/marketing-suites/brands/{brand-slug}/campaigns/{type}-{campaign-slug}/psychology/`
+
+**Standalone mode**: Save to `./.pawbytes/marketing-suites/brands/{brand-slug}/operations/psychology/`
+
+**Legacy fallback**: Save to `./.pawbytes/marketing-suites/brands/{brand-slug}/campaigns/psychology/` and suggest migration.
+
+If unsure which mode, ask: "Is this part of a specific campaign, or standalone work?"
+
 ## Reference Lookup Protocol
 
 This skill uses progressive disclosure. Start with `./references/frameworks-index.csv` to match the user's situation, then read only the matched framework file(s). Never bulk-read all framework files.

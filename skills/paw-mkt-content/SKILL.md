@@ -84,7 +84,7 @@ When the user requests content marketing work:
 5. **Save deliverables**: Write all outputs to the resolved path
 6. **Recommend next steps**: What to create first, what to test, when to review
 
-## Escalation Signals
+## Escalation Routes
 
 | Signal Detected | Escalate To | Reason |
 |---|---|---|
