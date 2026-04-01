@@ -104,4 +104,5 @@ Community deliverables include:
 | Content creation for community resources | paw-mkt-content |
 | Paid advertising for community growth | paw-mkt-paid-ads |
 | PR for community launch announcements | paw-mkt-pr |
+| Community health metrics visualization | paw-mkt-dashboard |
 | No brand presence yet (no product, audience) | Recommend foundational setup first |

@@ -80,6 +80,7 @@ See `./references/shared-patterns.md` for Starting Context Router and Pre-Flight
 - SEO optimization → paw-mkt-seo
 - Video production → paw-mkt-video
 - Analytics and attribution → paw-mkt-analytics
+- Launch metrics visualization → paw-mkt-dashboard
 - No SOSTAC plan exists → paw-mkt-sostac first
 
 ## Output Contract

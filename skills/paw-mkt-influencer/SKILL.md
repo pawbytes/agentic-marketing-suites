@@ -77,6 +77,7 @@ General references (best-practices.md, benchmarks.md, shared-patterns.md) are re
 - Social media calendar strategy → paw-mkt-social
 - Content creation beyond briefs → paw-mkt-content
 - Email sequences for creator onboarding → paw-mkt-email
+- Influencer campaign performance visualization → paw-mkt-dashboard
 - Legal contract drafting → recommend legal counsel
 - No brand presence yet → recommend foundational setup first
 

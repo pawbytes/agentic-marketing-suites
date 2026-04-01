@@ -96,6 +96,7 @@ When the user requests content marketing work:
 | SEO keyword research and technical optimization | paw-mkt-seo | "Keyword research and technical SEO support" |
 | Social media posting and community management | paw-mkt-social | "Social distribution and engagement" |
 | Video production beyond scripting | paw-mkt-video | "Video production support" |
+| Content performance visualization | paw-mkt-dashboard | "Dashboard for content KPIs and SEO tracking" |
 
 ## Output Contract
 

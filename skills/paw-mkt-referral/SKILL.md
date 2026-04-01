@@ -96,6 +96,7 @@ When the user requests referral, affiliate, or partnership marketing work:
 | Content for co-marketing assets | paw-mkt-content |
 | Paid ads or social promotion | paw-mkt-paid-ads or paw-mkt-social |
 | PR for partnership announcements | paw-mkt-pr |
+| Referral program metrics visualization | paw-mkt-dashboard |
 
 ## Output Contract
 

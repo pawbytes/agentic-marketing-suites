@@ -86,6 +86,7 @@ See `./references/deliverables.md` for detailed output specs.
 - Written content from video transcripts -> paw-mkt-content
 - Influencer video collaborations -> paw-mkt-influencer
 - Video SEO technical implementation (schema, site embeds) -> paw-mkt-seo
+- Video performance visualization -> paw-mkt-dashboard
 - No brand presence yet -> recommend foundational setup first
 
 ## Output Contract

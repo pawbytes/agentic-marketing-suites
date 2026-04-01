@@ -86,6 +86,7 @@ If unsure which mode, ask: "Is this part of a specific campaign, or standalone w
 | Crisis escalating beyond social | paw-mkt-pr |
 | Community platform management (Discord/Slack) | paw-mkt-community |
 | Content creation beyond social posts | paw-mkt-content |
+| Social performance visualization | paw-mkt-dashboard |
 
 ## Output Contract
 

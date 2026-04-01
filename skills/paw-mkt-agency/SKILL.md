@@ -107,6 +107,7 @@ As the coordinator, this skill routes outbound to all specialists:
 | Guerrilla, growth hacks | paw-mkt-guerrilla |
 | Positioning, personas, ICP | paw-mkt-product-context |
 | SOSTAC planning | paw-mkt-sostac |
+| Dashboard visualization, campaign tracking | paw-mkt-dashboard |
 
 ## Output Contract
 

@@ -242,3 +242,11 @@ After all 6 phases complete:
 - **Cross-phase consistency audit**: alignment verification
 - **Industry standard checklist**: professional marketing plan standards
 - **Final approval requested**: user must approve before execution
+
+## Escalation Routes
+
+| Signal | Routes To |
+|--------|-----------|
+| Control phase complete, metrics defined | paw-mkt-dashboard |
+| Analytics and tracking setup needed | paw-mkt-analytics |
+| Tactical implementation begins | paw-mkt-agency (for team coordination) |

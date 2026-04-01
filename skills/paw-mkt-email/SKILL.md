@@ -78,6 +78,7 @@ Read strategic context from `./references/shared-patterns.md` before any email w
 | Win-back showing product exits | paw-mkt-retention |
 | Lead magnet conversion declining | paw-mkt-cro |
 | High intent segment not converting | paw-mkt-sales |
+| Email KPI visualization needed | paw-mkt-dashboard |
 
 ## Output Contract
 

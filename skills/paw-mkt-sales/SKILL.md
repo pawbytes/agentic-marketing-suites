@@ -99,4 +99,5 @@ Every sales enablement deliverable includes:
 | Behavioral framing for objection handling | paw-mkt-psychology |
 | Case study needs deeper customer story | paw-mkt-content |
 | Lead nurture email sequences | paw-mkt-email |
+| Sales enablement effectiveness tracking | paw-mkt-dashboard |
 | Competitive intelligence for battle cards | paw-mkt-agency (research coordination) |

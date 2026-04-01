@@ -100,6 +100,7 @@ When the user requests PR or crisis communication work:
 - Social media content calendar and community management -> route to paw-mkt-social
 - Blog posts, case studies, or content beyond press releases -> route to paw-mkt-content
 - Email sequences for media nurture or stakeholder communication -> route to paw-mkt-email
+- PR metrics and coverage visualization -> route to paw-mkt-dashboard
 - Legal review of crisis response or press statements -> recommend legal counsel
 
 ## Output Contract

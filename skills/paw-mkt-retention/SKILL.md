@@ -94,6 +94,7 @@ For cancel flow, dunning, win-back, or proactive retention copy:
 | Onboarding activation failure | paw-mkt-cro |
 | Email deliverability issues | paw-mkt-email |
 | Educational content gap | paw-mkt-content |
+| Retention metrics visualization | paw-mkt-dashboard |
 
 ## Output Contract
 

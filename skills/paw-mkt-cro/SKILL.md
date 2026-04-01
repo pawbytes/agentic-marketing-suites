@@ -94,6 +94,7 @@ If unsure which mode, ask: "Is this part of a specific campaign, or standalone w
 | Behavioral psychology input for copy | paw-mkt-psychology |
 | Analytics tracking gaps blocking measurement | paw-mkt-analytics |
 | Content quality issues on pages | paw-mkt-content |
+| Experiment tracking and visualization | paw-mkt-dashboard |
 
 ## Output Contract
 

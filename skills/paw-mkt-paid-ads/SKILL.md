@@ -114,3 +114,4 @@ Every paid advertising deliverable includes:
 | Influencer content for paid amplification | paw-mkt-influencer |
 | Attribution and measurement setup | paw-mkt-analytics |
 | Video ad production | paw-mkt-video |
+| Campaign performance visualization | paw-mkt-dashboard |
