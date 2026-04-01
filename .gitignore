@@ -35,3 +35,4 @@ node_modules/
 .pawybytes/
 /.pawbytes
 /reports
+*.pyc

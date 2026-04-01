@@ -56,7 +56,7 @@ If unsure which mode, ask: "Is this part of a specific campaign, or standalone w
 
 ### 1. Video Script
 
-**Filename**: `scripts/script-{slug}-{YYYY-MM-DD}.md`
+**Filename**: `./scripts/script-{slug}-{YYYY-MM-DD}.md`
 
 **Sections**:
 - Meta (platform, length, type, audience, objective)
