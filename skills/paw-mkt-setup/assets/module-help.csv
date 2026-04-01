@@ -21,3 +21,4 @@ mkt,paw-mkt-analytics,Analytics,AN,GA4, GTM, dashboards, attribution, measuremen
 mkt,paw-mkt-video,Video,VI,YouTube, TikTok, Reels, video strategy & scripting,create,,anytime,,,,video scripts & strategy
 mkt,paw-mkt-psychology,Psychology,PS,Behavioral science, persuasion frameworks,apply,,anytime,,,,psychology recommendations
 mkt,paw-mkt-guerrilla,Guerrilla,GU,Growth hacks, viral campaigns, unconventional tactics,design,,anytime,,,,guerrilla campaign ideas
+mkt,paw-mkt-dashboard,Marketing Dashboard,DB,Interactive HTML dashboards for campaign tracking, analytics, and SOSTAC progress,build,[-H] [brand-slug],anytime,paw-mkt-setup:configure,,,brands_folder,HTML dashboards + JSON data files

@@ -5,14 +5,14 @@
     "url": "https://github.com/pawbytes/agentic-marketing-suites"
   },
   "metadata": {
-    "description": "Full-stack agentic marketing suite — 21 specialist skills covering strategy, channels, conversion, and growth",
-    "version": "0.3.6",
+    "description": "Full-stack agentic marketing suite — 22 specialist skills covering strategy, channels, conversion, and growth",
+    "version": "0.3.7",
     "repository": "https://github.com/pawbytes/agentic-marketing-suites"
   },
   "plugins": [
     {
       "name": "agentic-marketing-suites",
-      "description": "21 marketing specialist skills: agency coordinator, SOSTAC planning, SEO, content, email, social, paid ads, video, PR, influencer, referral, CRO, retention, pricing, launch, sales, analytics, community, guerrilla, psychology, and product marketing context",
+      "description": "22 marketing specialist skills: agency coordinator, SOSTAC planning, SEO, content, email, social, paid ads, video, PR, influencer, referral, CRO, retention, pricing, launch, sales, analytics, community, guerrilla, psychology, product marketing context, and marketing dashboard",
       "source": "./",
       "strict": false,
       "skills": [
@@ -37,7 +37,8 @@
         "./skills/paw-mkt-social",
         "./skills/paw-mkt-sostac",
         "./skills/paw-mkt-video",
-        "./skills/paw-mkt-product-context"
+        "./skills/paw-mkt-product-context",
+        "./skills/paw-mkt-dashboard"
       ]
     }
   ]
