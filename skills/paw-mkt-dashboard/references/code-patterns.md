@@ -34,7 +34,8 @@ Reference patterns for generating SvelteKit + sql.js dashboards. Adapt to match 
     "vite": "^6"
   },
   "dependencies": {
-    "sql.js": "^1"
+    "sql.js": "^1",
+    "marked": "^15"
   }
 }
 ```
@@ -266,6 +267,18 @@ function initSchema() {
     )
   `);
 
+  db.run(`
+    CREATE TABLE IF NOT EXISTS documents (
+      id INTEGER PRIMARY KEY AUTOINCREMENT,
+      slug TEXT NOT NULL UNIQUE,
+      title TEXT NOT NULL,
+      category TEXT DEFAULT 'root',
+      source_path TEXT NOT NULL,
+      content TEXT NOT NULL,
+      created_at TEXT DEFAULT (datetime('now'))
+    )
+  `);
+
   // --- Seed SOSTAC phases if empty ---
   const result = db.exec('SELECT COUNT(*) as c FROM sostac_progress');
   const count = result.length > 0 ? result[0].values[0][0] as number : 0;
@@ -288,6 +301,28 @@ function initSchema() {
   }
 
   // --- Seed additional data from brand discovery here ---
+
+  // --- Seed documents from discovered .md files ---
+  // During generation, the LLM reads all .md files from the brand workspace
+  // and inserts them here. Each file becomes a row in the documents table.
+  // Example:
+  //
+  // const docs = [
+  //   { slug: 'brand-context', title: 'Brand Context', category: 'root', source_path: 'brand-context.md', content: `...raw markdown...` },
+  //   { slug: 'sostac-situation', title: 'Situation Analysis', category: 'sostac', source_path: 'sostac/situation.md', content: `...raw markdown...` },
+  //   { slug: 'campaigns-launch-plan', title: 'Launch Plan', category: 'campaigns', source_path: 'campaigns/launch/plan.md', content: `...raw markdown...` },
+  // ];
+  //
+  // const docCount = db.exec('SELECT COUNT(*) as c FROM documents');
+  // const existingDocs = docCount.length > 0 ? docCount[0].values[0][0] as number : 0;
+  // if (existingDocs === 0) {
+  //   for (const doc of docs) {
+  //     db.run(
+  //       'INSERT INTO documents (slug, title, category, source_path, content) VALUES (?, ?, ?, ?, ?)',
+  //       [doc.slug, doc.title, doc.category, doc.source_path, doc.content]
+  //     );
+  //   }
+  // }
 }
 
 export function getDb() {
@@ -396,6 +431,7 @@ export const load: LayoutServerLoad = async () => {
   const campaignCount = get('SELECT COUNT(*) as c FROM campaigns') as { c: number } | undefined;
   const contentCount = get('SELECT COUNT(*) as c FROM content') as { c: number } | undefined;
   const sostac = get('SELECT COUNT(*) as c FROM sostac_progress WHERE complete = 1') as { c: number } | undefined;
+  const docCount = get('SELECT COUNT(*) as c FROM documents') as { c: number } | undefined;
 
   return {
     brandName: '{brand_name}',
@@ -406,6 +442,7 @@ export const load: LayoutServerLoad = async () => {
       { href: '/strategy', label: 'Strategy', count: `${sostac?.c ?? 0}/6` },
       { href: '/channels', label: 'Channels', count: null },
       { href: '/metrics', label: 'Metrics', count: null },
+      { href: '/documents', label: 'Documents', count: docCount?.c ?? 0 },
     ],
   };
 };
@@ -810,6 +847,310 @@ export const actions: Actions = {
 
 ---
 
+## Markdown Rendering
+
+### src/lib/utils/markdown.ts
+
+Server-side utility that converts raw markdown to HTML using `marked`.
+
+```ts
+import { marked } from 'marked';
+
+// Configure marked for clean output
+marked.setOptions({
+  gfm: true,
+  breaks: true,
+});
+
+export function renderMarkdown(content: string): string {
+  return marked.parse(content) as string;
+}
+```
+
+**Note:** `marked` is used server-side only — called in `+page.server.ts`, never in Svelte components directly.
+
+### MarkdownContent.svelte
+
+```svelte
+<script lang="ts">
+  let { html }: { html: string } = $props();
+</script>
+
+<article class="markdown-content">
+  {@html html}
+</article>
+
+<style>
+  .markdown-content :global(h1) {
+    font-size: 1.75rem;
+    font-weight: 600;
+    color: var(--color-neutral-900);
+    margin-top: 2rem;
+    margin-bottom: 0.75rem;
+    line-height: 1.2;
+  }
+  .markdown-content :global(h2) {
+    font-size: 1.375rem;
+    font-weight: 600;
+    color: var(--color-neutral-900);
+    margin-top: 1.75rem;
+    margin-bottom: 0.5rem;
+    line-height: 1.25;
+  }
+  .markdown-content :global(h3) {
+    font-size: 1.125rem;
+    font-weight: 600;
+    color: var(--color-neutral-800);
+    margin-top: 1.5rem;
+    margin-bottom: 0.5rem;
+  }
+  .markdown-content :global(p) {
+    margin-bottom: 1rem;
+    line-height: 1.7;
+    color: var(--color-neutral-700);
+  }
+  .markdown-content :global(ul),
+  .markdown-content :global(ol) {
+    margin-bottom: 1rem;
+    padding-left: 1.5rem;
+    color: var(--color-neutral-700);
+  }
+  .markdown-content :global(li) {
+    margin-bottom: 0.25rem;
+    line-height: 1.6;
+  }
+  .markdown-content :global(ul) {
+    list-style-type: disc;
+  }
+  .markdown-content :global(ol) {
+    list-style-type: decimal;
+  }
+  .markdown-content :global(code) {
+    background: var(--color-neutral-100);
+    padding: 0.15rem 0.4rem;
+    border-radius: 0.25rem;
+    font-size: 0.875em;
+  }
+  .markdown-content :global(pre) {
+    background: var(--color-neutral-900);
+    color: var(--color-neutral-100);
+    padding: 1rem 1.25rem;
+    border-radius: 0.5rem;
+    overflow-x: auto;
+    margin-bottom: 1rem;
+    font-size: 0.875rem;
+    line-height: 1.5;
+  }
+  .markdown-content :global(pre code) {
+    background: none;
+    padding: 0;
+    border-radius: 0;
+    color: inherit;
+    font-size: inherit;
+  }
+  .markdown-content :global(blockquote) {
+    border-left: 3px solid var(--color-primary);
+    padding-left: 1rem;
+    margin-bottom: 1rem;
+    color: var(--color-neutral-600);
+    font-style: italic;
+  }
+  .markdown-content :global(table) {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 1rem;
+    font-size: 0.875rem;
+  }
+  .markdown-content :global(th) {
+    text-align: left;
+    padding: 0.5rem 0.75rem;
+    border-bottom: 2px solid var(--color-neutral-200);
+    font-weight: 600;
+    color: var(--color-neutral-700);
+  }
+  .markdown-content :global(td) {
+    padding: 0.5rem 0.75rem;
+    border-bottom: 1px solid var(--color-neutral-100);
+    color: var(--color-neutral-600);
+  }
+  .markdown-content :global(a) {
+    color: var(--color-primary);
+    text-decoration: underline;
+    text-underline-offset: 2px;
+  }
+  .markdown-content :global(a:hover) {
+    color: var(--color-primary-dark);
+  }
+  .markdown-content :global(hr) {
+    border: none;
+    border-top: 1px solid var(--color-neutral-200);
+    margin: 2rem 0;
+  }
+  .markdown-content :global(strong) {
+    font-weight: 600;
+    color: var(--color-neutral-900);
+  }
+  .markdown-content :global(img) {
+    max-width: 100%;
+    border-radius: 0.5rem;
+    margin: 1rem 0;
+  }
+</style>
+```
+
+---
+
+## Documents Route Patterns
+
+### Documents Index — src/routes/documents/+page.server.ts
+
+```ts
+import { all } from '$lib/server/db';
+import type { PageServerLoad } from './$types';
+
+export const load: PageServerLoad = async () => {
+  const documents = all('SELECT id, slug, title, category, source_path FROM documents ORDER BY category, title');
+
+  // Group by category
+  const grouped: Record<string, Array<{ slug: string; title: string; source_path: string }>> = {};
+  for (const doc of documents) {
+    const cat = (doc.category as string) || 'root';
+    if (!grouped[cat]) grouped[cat] = [];
+    grouped[cat].push({
+      slug: doc.slug as string,
+      title: doc.title as string,
+      source_path: doc.source_path as string,
+    });
+  }
+
+  return { grouped, total: documents.length };
+};
+```
+
+### Documents Index — src/routes/documents/+page.svelte
+
+```svelte
+<script lang="ts">
+  import EmptyState from '$lib/components/EmptyState.svelte';
+
+  let { data } = $props();
+
+  const categoryLabels: Record<string, string> = {
+    root: 'Brand',
+    sostac: 'SOSTAC Strategy',
+    campaigns: 'Campaigns',
+    content: 'Content',
+    channels: 'Channels',
+    operations: 'Operations',
+  };
+
+  const categories = Object.entries(data.grouped);
+</script>
+
+<div class="space-y-8">
+  <div class="flex items-center justify-between">
+    <div>
+      <h1 class="text-xl font-semibold text-neutral-900">Documents</h1>
+      <p class="text-sm text-neutral-500 mt-1">{data.total} files from brand workspace</p>
+    </div>
+  </div>
+
+  {#if categories.length === 0}
+    <EmptyState
+      title="No documents found"
+      description="Documents are indexed from your brand workspace during dashboard generation."
+      action="Regenerate dashboard"
+      onAction={() => {}}
+    />
+  {:else}
+    {#each categories as [category, docs]}
+      <section>
+        <h2 class="text-sm font-medium text-neutral-500 uppercase tracking-wide mb-3">
+          {categoryLabels[category] ?? category}
+        </h2>
+        <div class="bg-white rounded-lg border border-neutral-200 divide-y divide-neutral-100">
+          {#each docs as doc}
+            <a href="/documents/{doc.slug}"
+               class="flex items-center justify-between px-4 py-3 hover:bg-neutral-50 transition-colors">
+              <div>
+                <span class="text-sm font-medium text-neutral-900">{doc.title}</span>
+                <span class="text-xs text-neutral-400 ml-2">{doc.source_path}</span>
+              </div>
+              <span class="text-neutral-300 text-sm">&rarr;</span>
+            </a>
+          {/each}
+        </div>
+      </section>
+    {/each}
+  {/if}
+</div>
+```
+
+### Document Detail — src/routes/documents/[slug]/+page.server.ts
+
+```ts
+import { get } from '$lib/server/db';
+import { error } from '@sveltejs/kit';
+import { renderMarkdown } from '$lib/utils/markdown';
+import type { PageServerLoad } from './$types';
+
+export const load: PageServerLoad = async ({ params }) => {
+  const doc = get('SELECT * FROM documents WHERE slug = ?', [params.slug]);
+  if (!doc) throw error(404, 'Document not found');
+
+  const html = renderMarkdown(doc.content as string);
+
+  return {
+    title: doc.title as string,
+    category: doc.category as string,
+    source_path: doc.source_path as string,
+    html,
+  };
+};
+```
+
+### Document Detail — src/routes/documents/[slug]/+page.svelte
+
+```svelte
+<script lang="ts">
+  import MarkdownContent from '$lib/components/MarkdownContent.svelte';
+
+  let { data } = $props();
+
+  const categoryLabels: Record<string, string> = {
+    root: 'Brand',
+    sostac: 'SOSTAC Strategy',
+    campaigns: 'Campaigns',
+    content: 'Content',
+    channels: 'Channels',
+    operations: 'Operations',
+  };
+</script>
+
+<div class="space-y-6">
+  <div>
+    <a href="/documents" class="text-sm text-primary hover:text-primary-dark">&larr; All documents</a>
+  </div>
+
+  <div>
+    <div class="flex items-center gap-2 mb-1">
+      <span class="text-xs text-neutral-400 uppercase tracking-wide">
+        {categoryLabels[data.category] ?? data.category}
+      </span>
+      <span class="text-xs text-neutral-300">/</span>
+      <span class="text-xs text-neutral-400">{data.source_path}</span>
+    </div>
+    <h1 class="text-xl font-semibold text-neutral-900">{data.title}</h1>
+  </div>
+
+  <div class="bg-white rounded-lg border border-neutral-200 p-8 max-w-3xl">
+    <MarkdownContent html={data.html} />
+  </div>
+</div>
+```
+
+---
+
 ## Export/Import API
 
 ### src/routes/api/export/+server.ts
@@ -826,7 +1167,7 @@ const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const EXPORT_DIR = path.resolve(__dirname, '../../../../../data/export');
 
 export const GET: RequestHandler = async () => {
-  const tables = ['campaigns', 'content', 'sostac_progress', 'analytics_metrics', 'channels'];
+  const tables = ['campaigns', 'content', 'sostac_progress', 'analytics_metrics', 'channels', 'documents'];
   const exported: Record<string, number> = {};
 
   fs.mkdirSync(EXPORT_DIR, { recursive: true });
@@ -945,5 +1286,9 @@ Before finishing generation, verify:
 - [ ] Filters use GET forms with URL search params
 - [ ] Empty states have title, description, and action button
 - [ ] Status badges use semantic colors (not gradients)
+- [ ] Documents table seeded with all discovered `.md` files from brand workspace
+- [ ] `marked` is in `dependencies` (not devDependencies) in package.json
+- [ ] Markdown rendered server-side in `+page.server.ts`, never in Svelte components
+- [ ] Document slugs are unique, derived from file path (e.g., `sostac-situation`, `campaigns-launch-plan`)
 - [ ] `.gitignore` includes `data/dashboard.db`, `node_modules`, `.svelte-kit`
 - [ ] Design follows `design-guide.md` anti-patterns checklist

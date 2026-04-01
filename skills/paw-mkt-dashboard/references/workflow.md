@@ -26,9 +26,15 @@ Workflow for generating and managing SvelteKit dashboards with LLM-built UI.
    - `channels/` — Channel-specific content
    - `content/` — Content calendar, email sequences, SEO research
    - `operations/` — Operational data (analytics, cro, retention, etc.)
-3. **Check for existing dashboards** — For each brand, check if `{brand-path}/dashboard/package.json` exists. If so, scan what routes exist (look for `src/routes/*/+page.svelte`).
-4. Build discovery summary: brands found, data available, dashboard status
-5. Present contextual options to user (see SKILL.md On Activation)
+3. **Collect all markdown documents** — Recursively find all `.md` files across the brand workspace. For each file, record:
+   - Relative path from brand root (used as slug)
+   - Parent folder name (used as category: sostac, campaigns, content, channels, operations, root)
+   - File title (first `# heading` in the file, or filename if no heading)
+   - Full raw markdown content
+   These get stored in a `documents` table during schema creation (Stage 2) and rendered read-only in the `/documents` route.
+4. **Check for existing dashboards** — For each brand, check if `{brand-path}/dashboard/package.json` exists. If so, scan what routes exist (look for `src/routes/*/+page.svelte`).
+5. Build discovery summary: brands found, data available, documents found, dashboard status
+6. Present contextual options to user (see SKILL.md On Activation)
 
 **Routing after user selects intent:**
 
@@ -78,8 +84,9 @@ Workflow for generating and managing SvelteKit dashboards with LLM-built UI.
    - `analytics_metrics` — KPI storage with date tracking
    - `channels` — channel performance data
    - `experiments` — growth experiments with ICE scores
+   - `documents` — all discovered `.md` files with slug, category, title, and raw markdown content (read-only reference)
    - Additional tables as needed based on data
-3. Plan seed data from discovered files
+3. Plan seed data from discovered files — including inserting all collected markdown documents into the `documents` table
 
 **Output:** Schema design (internal, used for code generation).
 
@@ -169,21 +176,38 @@ export const actions = {
 
 After each form action, SvelteKit automatically re-runs the load function — the UI updates reactively without manual fetch/refresh.
 
-### 4d. Generate Shared Components
+### 4d. Generate Documents Route
+
+A read-only route that renders all discovered markdown files as formatted HTML.
+
+**Index page** (`/documents`):
+- `+page.server.ts` — Load all documents from `documents` table, grouped by category
+- `+page.svelte` — Document index with category sections and links to individual docs
+
+**Detail page** (`/documents/[slug]`):
+- `+page.server.ts` — Load single document by slug, render markdown to HTML server-side using `marked`
+- `+page.svelte` — Rendered HTML with prose-friendly typography (generous line height, heading hierarchy, code blocks, lists)
+
+The markdown renderer (`$lib/utils/markdown.ts`) uses `marked` for server-side conversion. Rendered content uses a `MarkdownContent.svelte` component with Tailwind prose-like styling.
+
+**No CRUD on documents.** They are seeded from discovery and regenerated on update. Users read them, not edit them.
+
+### 4e. Generate Shared Components
 
 In `src/lib/components/`:
 - `Sidebar.svelte` — Navigation with active state
 - `Modal.svelte` — Add/edit dialog
 - `StatusBadge.svelte` — Semantic color badges
 - `EmptyState.svelte` — Meaningful empty states with actions
+- `MarkdownContent.svelte` — Prose-formatted markdown display (used by documents route)
 - Additional components as needed
 
-### 4e. Generate Export/Import API
+### 4f. Generate Export/Import API
 
 - `src/routes/api/export/+server.ts` — GET dumps all tables to JSON, writes to `data/export/`
 - `src/routes/api/import/+server.ts` — POST reads JSON from `data/export/`, upserts into SQLite
 
-### 4f. Generate .gitignore
+### 4g. Generate .gitignore
 
 ```
 node_modules/
@@ -239,6 +263,8 @@ build/
 - /strategy — SOSTAC progress (1/6 phases complete)
 - /channels — Channel performance
 - /metrics — Analytics metrics
+- /documents — Read-only markdown documents (12 files indexed)
+- /documents/{slug} — Individual document view
 - /api/export — JSON export
 - /api/import — JSON import
 

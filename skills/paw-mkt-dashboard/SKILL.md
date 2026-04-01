@@ -90,6 +90,7 @@ If no brands found at all, suggest running `paw-mkt-setup` first.
 | **Customer Lifecycle** | Churn, retention, LTV, cohort health | `retention/` folders, customer data |
 | **Revenue & Pricing** | MRR, ARPU, pricing tiers, deal pipeline | `pricing/`, `sales/` folders |
 | **Brand Strategy** | SOSTAC phases, brand context, positioning | `sostac/`, `brand-context.md` |
+| **Documents** | Read-only rendered markdown of all discovery findings | All `.md` files across brand workspace |
 | **Growth Experiments** | Experiments, ICE scores, results | `cro/`, `guerrilla/` folders |
 | **Channel Performance** | Per-channel metrics (email, social, paid, SEO) | Channel folders under `channels/` |
 | **Operations** | Team capacity, agency coordination, multi-brand | Brand workspace structure |
@@ -135,6 +136,7 @@ After user selects intent (from On Activation):
 | **UI** | Svelte 5 (runes) | Reactive components |
 | **Styling** | TailwindCSS v4 | Utility-first CSS |
 | **Server** | SvelteKit server routes + form actions | CRUD API + progressive enhancement |
+| **Markdown** | marked | Server-side markdown-to-HTML rendering for document views |
 
 **Why sql.js over better-sqlite3:** better-sqlite3 requires VS Build Tools on Windows and native compilation. sql.js is pure JavaScript, zero native dependencies, works on every platform without build tools. Same SQL interface, slightly different initialization pattern.
 
@@ -156,6 +158,8 @@ After user selects intent (from On Activation):
         │   ├── lib/
         │   │   ├── server/
         │   │   │   └── db.ts           # sql.js singleton + schema + seed data (single module)
+        │   │   ├── utils/
+        │   │   │   └── markdown.ts     # Markdown-to-HTML renderer (server-side)
         │   │   └── components/         # Reusable Svelte components (LLM-generated)
         │   │       ├── Sidebar.svelte
         │   │       ├── DataTable.svelte
@@ -176,6 +180,12 @@ After user selects intent (from On Activation):
         │       ├── strategy/
         │       │   ├── +page.svelte
         │       │   └── +page.server.ts
+        │       ├── documents/
+        │       │   ├── +page.svelte        # Document index — all discovered .md files
+        │       │   ├── +page.server.ts     # Load document list from db
+        │       │   └── [slug]/
+        │       │       ├── +page.svelte    # Rendered markdown (read-only)
+        │       │       └── +page.server.ts # Load + render single document
         │       └── api/
         │           └── export/
         │               └── +server.ts  # JSON export endpoint
@@ -243,3 +253,4 @@ Every dashboard generation includes:
 | **Import** | JSON → SQLite for restoring data |
 | **Responsive** | Works on desktop and mobile |
 | **Progressive enhancement** | Forms work without JavaScript |
+| **Documents** | Read-only rendered markdown of all discovered brand workspace files |
