@@ -2,6 +2,20 @@
 
 All notable changes to the Agentic Marketing Suite will be documented in this file.
 
+## [0.4.0] - 2026-04-02
+
+### Added
+- **Marketing Dashboard Skill**: New `paw-mkt-dashboard` skill (22nd specialist) for generating interactive standalone HTML dashboards — campaign tracking, analytics visualization, and SOSTAC progress monitoring
+- **Dashboard Escalation Routes**: All 15 channel specialist skills now route to `paw-mkt-dashboard` for visualization needs
+- **SOSTAC Escalation Routes**: Added escalation routes section to SOSTAC skill for post-planning handoff
+- **Setup Test Scripts**: Added Python test scripts for cleanup-legacy, merge-config, and merge-help-csv
+
+### Fixed
+- **Video Deliverables Path**: Fixed relative path in video deliverables reference doc
+
+### Chores
+- Added `*.pyc` to `.gitignore`
+
 ## [0.3.7] - 2026-04-01
 
 ### Added
