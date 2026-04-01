@@ -40,7 +40,7 @@ Example: "Your headline reads like a company tagline. A passing headline reads l
 
 ## On Activation
 
-Load available config from `{project-root}/.pawbytes/marketing-suites/config/config.yaml` and `{project-root}/.pawbytes/marketing-suites/config/config.user.yaml` if present. Resolve and apply throughout the session (defaults in parens):
+Load available config from `{project-root}/.pawbytes/config/config.yaml` and `{project-root}/.pawbytes/config/config.user.yaml` if present. Resolve and apply throughout the session (defaults in parens):
 
 - `{user_name}` (null) — address the user by name
 - `{communication_language}` (user or system intent) — use for all communications

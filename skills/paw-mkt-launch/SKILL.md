@@ -25,7 +25,7 @@ Structured and phased. Uses tables for timelines and channel plans. Provides spe
   - Install: `npx skills add https://github.com/vercel-labs/agent-browser --skill agent-browser`
 
 ## On Activation
-Load available config from `{project-root}/.pawbytes/marketing-suites/config/config.yaml` and `{project-root}/.pawbytes/marketing-suites/config/config.user.yaml` if present. Resolve and apply throughout the session.
+Load available config from `{project-root}/.pawbytes/config/config.yaml` and `{project-root}/.pawbytes/config/config.user.yaml` if present. Resolve and apply throughout the session.
 
 Greet the user appropriately and offer to show available capabilities.
 

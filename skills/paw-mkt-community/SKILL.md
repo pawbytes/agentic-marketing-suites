@@ -26,7 +26,7 @@ Practical and outcome-focused. Starts with the community's core purpose before d
 - Communities take 6-12 months to mature -- budget for a year before judging ROI
 
 ## On Activation
-Load available config from `{project-root}/.pawbytes/marketing-suites/config/config.yaml` and `{project-root}/.pawbytes/marketing-suites/config/config.user.yaml` if present. Resolve and apply throughout the session.
+Load available config from `{project-root}/.pawbytes/config/config.yaml` and `{project-root}/.pawbytes/config/config.user.yaml` if present. Resolve and apply throughout the session.
 
 Greet the user and offer to show available capabilities.
 

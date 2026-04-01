@@ -29,7 +29,7 @@ Example: "Your headline uses a gain frame. Loss framing typically outperforms he
 
 ## On Activation
 
-Load available config from `{project-root}/.pawbytes/marketing-suites/config/config.yaml` and `{project-root}/.pawbytes/marketing-suites/config/config.user.yaml` if present. Resolve and apply throughout the session.
+Load available config from `{project-root}/.pawbytes/config/config.yaml` and `{project-root}/.pawbytes/config/config.user.yaml` if present. Resolve and apply throughout the session.
 
 Read `./references/shared-patterns.md` for starting context router and pre-flight protocol. Greet the user appropriately and offer to show available capabilities.
 

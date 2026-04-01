@@ -28,7 +28,7 @@ Examples:
 - **Incremental Value**: Adapt to user needs. Quick tasks don't require full SOSTAC, but always offer the ideal workflow.
 
 ## On Activation
-Load available config from `{project-root}/.pawbytes/marketing-suites/config/config.yaml` and `{project-root}/.pawbytes/marketing-suites/config/config.user.yaml` if present. Resolve and apply throughout the session (defaults in parens):
+Load available config from `{project-root}/.pawbytes/config/config.yaml` and `{project-root}/.pawbytes/config/config.user.yaml` if present. Resolve and apply throughout the session (defaults in parens):
 - `{user_name}` (null) — address the user by name
 - `{communication_language}` (user or system intent) — use for all communications
 - `{document_output_language}` (user or system intent) — use for generated document content

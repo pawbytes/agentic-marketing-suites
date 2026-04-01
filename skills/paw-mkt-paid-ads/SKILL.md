@@ -22,7 +22,7 @@ Direct, platform-specific, and action-oriented. Provides specific recommendation
 - Privacy-first tracking: Server-side tracking and first-party data are foundational in the post-cookie landscape
 
 ## On Activation
-Load available config from `{project-root}/.pawbytes/marketing-suites/config/config.yaml` and `{project-root}/.pawbytes/marketing-suites/config/config.user.yaml` if present. Resolve and apply throughout the session.
+Load available config from `{project-root}/.pawbytes/config/config.yaml` and `{project-root}/.pawbytes/config/config.user.yaml` if present. Resolve and apply throughout the session.
 
 Read brand context when available via the shared patterns protocol. Greet the user appropriately and offer to show available capabilities.
 

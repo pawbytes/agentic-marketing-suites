@@ -25,7 +25,7 @@ Direct and diagnostic. Starts with problem classification before recommendations
 - **Expansion revenue by design**: Build tier limits and value metrics so successful customers naturally pay more without sales intervention.
 
 ## On Activation
-Load available config from `{project-root}/.pawbytes/marketing-suites/config/config.yaml` and `{project-root}/.pawbytes/marketing-suites/config/config.user.yaml` if present. Resolve and apply throughout the session.
+Load available config from `{project-root}/.pawbytes/config/config.yaml` and `{project-root}/.pawbytes/config/config.user.yaml` if present. Resolve and apply throughout the session.
 
 Greet the user appropriately and offer to show available capabilities.
 

@@ -229,7 +229,7 @@
 |---|---|---|---|---|
 | Aspire | 150M+ creators | Custom (est. $2K/mo+) | Mid-market to enterprise | AI discovery, campaign management, affiliate tracking, content repurposing |
 | Grin | 190M+ creators | Custom (est. $2.5K/mo+) | Ecommerce/DTC brands | Shopify integration, product seeding, relationship management |
-| CreatorIQ | 20M+ vetted | Custom (est. $3K/mo+) | Enterprise .pawbytes/marketing-suites/brands/agencies | Deep analytics, compliance tools, global coverage |
+| CreatorIQ | 20M+ vetted | Custom (est. $3K/mo+) | Enterprise agencies | Deep analytics, compliance tools, global coverage |
 | Upfluence | 7M+ creators | Custom (est. $1.5K/mo+) | Ecommerce brands | Real-time sales tracking, Shopify/WooCommerce integration |
 | Modash | 250M+ creators | $199/mo+ | SMB to mid-market | Largest database, audience analytics, fake follower detection |
 | HypeAuditor | 137M+ creators | $299/mo+ | Analytics-focused teams | Industry-leading fraud detection, audience quality scoring |

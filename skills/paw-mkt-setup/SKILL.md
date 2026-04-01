@@ -9,9 +9,9 @@ description: Sets up Agentic Marketing Suite module in a project. Use when the u
 
 Installs and configures the Agentic Marketing Suite into a project. Module identity (name, code, version) comes from `./assets/module.yaml`. Collects user preferences and writes them to:
 
-- **`{project-root}/.pawbytes/marketing-suites/config/config.yaml`** — shared project config: core settings at root plus a section per module with metadata and module-specific values. User-only keys (`user_name`, `communication_language`) are **never** written here.
-- **`{project-root}/.pawbytes/marketing-suites/config/config.user.yaml`** — personal settings intended to be gitignored: `user_name`, `communication_language`, and any module variable marked `user_setting: true`. These values live exclusively here.
-- **`{project-root}/.pawbytes/marketing-suites/config/module-help.csv`** — registers module capabilities for the help system.
+- **`{project-root}/.pawbytes/config/config.yaml`** — shared ecosystem config: core settings at root plus a section per module with metadata and module-specific values. User-only keys (`user_name`, `communication_language`) are **never** written here.
+- **`{project-root}/.pawbytes/config/config.user.yaml`** — personal settings intended to be gitignored: `user_name`, `communication_language`, and any module variable marked `user_setting: true`. These values live exclusively here.
+- **`{project-root}/.pawbytes/config/module-help.csv`** — registers module capabilities for the help system.
 
 Both config scripts use an anti-zombie pattern — existing entries for this module are removed before writing fresh ones, so stale values never persist.
 
@@ -39,8 +39,9 @@ Warm but efficient. Guides users through configuration with clear prompts and se
 ## On Activation
 
 1. Read `./assets/module.yaml` for module metadata and variable definitions (the `code` field is the module identifier)
-2. Check if `{project-root}/.pawbytes/marketing-suites/config/config.yaml` exists — if a section matching the module's code is already present, inform the user this is an update
+2. Check if `{project-root}/.pawbytes/config/config.yaml` exists — if a section matching the module's code is already present, inform the user this is an update
 3. **Detect legacy paths** for auto-migration:
+   - `{project-root}/.pawbytes/marketing-suites/config/` → `{project-root}/.pawbytes/config/`
    - `{project-root}/brands/` → `{project-root}/.pawbytes/marketing-suites/brands/`
    - `{project-root}/reports/` → `{project-root}/.pawbytes/marketing-suites/reports/`
 
@@ -52,9 +53,15 @@ Before collecting configuration, check for legacy directories and **automaticall
 
 ```bash
 # Create new directory structure
+mkdir -p "{project-root}/.pawbytes/config"
 mkdir -p "{project-root}/.pawbytes/marketing-suites/brands"
 mkdir -p "{project-root}/.pawbytes/marketing-suites/reports"
-mkdir -p "{project-root}/.pawbytes/marketing-suites/config"
+
+# Migrate legacy config folder (marketing-suites specific to ecosystem shared)
+if [ -d "{project-root}/.pawbytes/marketing-suites/config" ]; then
+  mv "{project-root}/.pawbytes/marketing-suites/config/"* "{project-root}/.pawbytes/config/" 2>/dev/null || true
+  rmdir "{project-root}/.pawbytes/marketing-suites/config" 2>/dev/null || true
+fi
 
 # Migrate legacy brands folder
 if [ -d "{project-root}/brands" ]; then
@@ -93,13 +100,13 @@ Write a temp JSON file with the collected answers structured as `{"core": {...},
 
 ```bash
 python3 ./scripts/merge-config.py \
-  --config-path "{project-root}/.pawbytes/marketing-suites/config/config.yaml" \
-  --user-config-path "{project-root}/.pawbytes/marketing-suites/config/config.user.yaml" \
+  --config-path "{project-root}/.pawbytes/config/config.yaml" \
+  --user-config-path "{project-root}/.pawbytes/config/config.user.yaml" \
   --module-yaml ./assets/module.yaml \
   --answers {temp-file}
 
 python3 ./scripts/merge-help-csv.py \
-  --target "{project-root}/.pawbytes/marketing-suites/config/module-help.csv" \
+  --target "{project-root}/.pawbytes/config/module-help.csv" \
   --source ./assets/module-help.csv \
   --module-code ams
 ```

@@ -25,7 +25,7 @@ Senior SEO specialist with deep expertise across technical SEO, content SEO, loc
 - Build for AI search: be the source that LLMs cite
 
 ## On Activation
-Load available config from `{project-root}/.pawbytes/marketing-suites/config/config.yaml` and `{project-root}/.pawbytes/marketing-suites/config/config.user.yaml` if present. Resolve and apply throughout the session.
+Load available config from `{project-root}/.pawbytes/config/config.yaml` and `{project-root}/.pawbytes/config/config.user.yaml` if present. Resolve and apply throughout the session.
 
 Read `./references/shared-patterns.md` for starting context routing and pre-flight sequence.
 

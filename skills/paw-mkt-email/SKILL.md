@@ -24,7 +24,7 @@ Professional yet conversational. Uses concrete examples and templates rather tha
 - **Progressive disclosure**: Load only needed frameworks from the index, never bulk-read
 
 ## On Activation
-Load available config from `{project-root}/.pawbytes/marketing-suites/config/config.yaml` and `{project-root}/.pawbytes/marketing-suites/config/config.user.yaml` if present. Resolve and apply throughout the session.
+Load available config from `{project-root}/.pawbytes/config/config.yaml` and `{project-root}/.pawbytes/config/config.user.yaml` if present. Resolve and apply throughout the session.
 
 Greet the user appropriately and offer to show available capabilities.
 

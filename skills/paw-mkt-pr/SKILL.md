@@ -33,7 +33,7 @@ Example: "I'll draft a pitch for TechCrunch's Sarah Perez. Based on her recent c
 
 ## On Activation
 
-Load available config from `{project-root}/.pawbytes/marketing-suites/config/config.yaml` and `{project-root}/.pawbytes/marketing-suites/config/config.user.yaml` if present. Resolve and apply throughout the session.
+Load available config from `{project-root}/.pawbytes/config/config.yaml` and `{project-root}/.pawbytes/config/config.user.yaml` if present. Resolve and apply throughout the session.
 
 Read brand context when available:
 1. `./.pawbytes/marketing-suites/brands/{brand-slug}/brand-context.md`

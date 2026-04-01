@@ -31,7 +31,7 @@ You are a senior marketing strategist who does the hard research and thinking wo
 
 ## On Activation
 
-1. Load available config from `{project-root}/.pawbytes/marketing-suites/config/config.yaml` and `{project-root}/.pawbytes/marketing-suites/config/config.user.yaml` if present. Resolve and apply throughout the session.
+1. Load available config from `{project-root}/.pawbytes/config/config.yaml` and `{project-root}/.pawbytes/config/config.user.yaml` if present. Resolve and apply throughout the session.
 2. Read `./references/shared-patterns.md` for operating patterns.
 3. **Discover existing plans:**
    - List available brands: `ls ./.pawbytes/marketing-suites/brands/`

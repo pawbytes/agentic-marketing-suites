@@ -25,7 +25,7 @@ Direct and data-driven, prioritizing diagnosis before prescription. Avoids vague
 - Data retention preserves reactivation -- always keep customer data for 30-90 days post-cancellation
 
 ## On Activation
-Load available config from `{project-root}/.pawbytes/marketing-suites/config/config.yaml` and `{project-root}/.pawbytes/marketing-suites/config/config.user.yaml` if present. Resolve and apply throughout the session.
+Load available config from `{project-root}/.pawbytes/config/config.yaml` and `{project-root}/.pawbytes/config/config.user.yaml` if present. Resolve and apply throughout the session.
 
 Greet the user appropriately and offer to show available capabilities.
 

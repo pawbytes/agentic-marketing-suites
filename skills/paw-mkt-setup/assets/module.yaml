@@ -1,7 +1,7 @@
 code: ams
 name: Agentic Marketing Suite
 description: 21 specialized AI marketing agents covering strategy, content, SEO, paid ads, social, email, CRO, PR, pricing, retention, and more — orchestrated through SOSTAC-based planning.
-module_version: 0.3.5
+module_version: 0.3.6
 default_selected: false
 module_greeting: |
   🎯 **Agentic Marketing Suite activated.** You now have 21 specialized marketing agents at your disposal.
@@ -38,5 +38,6 @@ communication_language:
 
 # Legacy migration paths (used by setup skill for auto-migration)
 legacy_paths:
+  config: "{project-root}/.pawbytes/marketing-suites/config"
   brands: "{project-root}/brands"
   reports: "{project-root}/reports"
